@@ -1,0 +1,27 @@
+//
+//  YBHCollectionSection.h
+//  YBHandyListDemo
+//
+//  Created by 杨波 on 2019/6/18.
+//  Copyright © 2019 杨波. All rights reserved.
+//
+
+#import "YBHCollectionCellConfig.h"
+#import "YBHCollectionHeaderFooterConfig.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface YBHCollectionSection : NSObject
+
+/** UICollectionView 的 header 配置 */
+@property (nonatomic, strong, nullable) id<YBHCollectionHeaderFooterConfig> header;
+
+/** UICollectionView 的 footer 配置 */
+@property (nonatomic, strong, nullable) id<YBHCollectionHeaderFooterConfig> footer;
+
+/** UICollectionView 的 cell 配置数组 */
+@property (nonatomic, strong, readonly) NSMutableArray<id<YBHCollectionCellConfig>> *rowArray;
+
+@end
+
+NS_ASSUME_NONNULL_END
