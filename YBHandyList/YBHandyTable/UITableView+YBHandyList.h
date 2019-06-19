@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSMutableArray<YBHTableSection *> *ybht_sectionArray;
 
 /** 代理实现者，将数组内容转换为列表代理方法的核心类
- （需要实现额外的 UITableView 的代理方法，可以自定义继承 YBHandyTableIMP 的类并赋值）*/
+ （需要实现额外的 UITableView 代理方法，可以自定义继承 YBHandyTableIMP 的类并赋值该属性）*/
 @property (nonatomic, strong) __kindof YBHandyTableIMP *ybht_tableIMP;
 
 @end

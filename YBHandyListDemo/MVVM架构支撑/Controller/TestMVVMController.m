@@ -15,20 +15,19 @@
 @property (nonatomic, strong) TestMVVMControllerViewModel *viewModel;
 @end
 
-@implementation TestMVVMController {
-    BOOL _loading;
-}
+@implementation TestMVVMController
 
 #pragma mark - life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColor.whiteColor;
     [self updateUI];
     [self loadData];
 }
 
 - (void)updateUI {
+    self.navigationItem.title = @"MVVM";
+    self.view.backgroundColor = UIColor.whiteColor;
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(clickRefreshItem)];
     self.navigationItem.rightBarButtonItem = item;
     [self.view addSubview:self.tableView];

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol TestTableNibCellDelegate;
 
 /**
- 为 TestTableNibCell 做的配置对象，此处用于拓展一个代理属性和一个标题
+ 为 TestTableNibCell 做的配置对象，此处用于拓展一个代理属性和一个标题，可以继承 YBHTableCellConfig 也可以直接实现 <YBHTableCellConfig> 协议。
  */
 @interface TestTableNibCellConfig : YBHTableCellConfig
 

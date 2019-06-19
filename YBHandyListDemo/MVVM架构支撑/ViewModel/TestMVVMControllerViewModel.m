@@ -30,11 +30,11 @@
             TestMVVMModel *model = [TestMVVMModel new];
             model.name = key;
             model.comment = obj;
-            model.type = arc4random() % 3;  //模拟服务器动态类型
+            model.type = arc4random() % 3;  //模拟服务器动态类型下发
             [modelArray addObject:model];
         }];
         
-        //加工模型，初始化 ViewModel (这些 ViewModel 都是一样的属性是为了方便)
+        //加工模型，初始化 ViewModel (为了方便，这些 ViewModel 都是一样的属性)
         NSMutableArray *viewModelArray = [NSMutableArray array];
         for (TestMVVMModel *model in modelArray) {
             id viewModel;
