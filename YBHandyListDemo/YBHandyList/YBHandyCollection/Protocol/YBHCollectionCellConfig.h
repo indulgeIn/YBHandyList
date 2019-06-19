@@ -18,18 +18,18 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 
 /** cell 的类类型 */
-@property (nonatomic, strong) Class<YBHCollectionCellProtocol> ybhc_cellClass;
+- (Class<YBHCollectionCellProtocol>)ybhc_cellClass;
 
 @optional
 
 /** cell 对应的数据模型 */
-@property (nonatomic, strong) id ybhc_model;
-
-/** cell 的复用标识 */
-@property (nonatomic, copy, nullable) NSString *ybhc_cellReuseIdentifier;
+- (id)ybhc_model;
 
 /** cell 的默认大小 (优先级低于 YBHCollectionCellProtocol 代理方法返回的高度) */
-@property (nonatomic, assign) CGSize ybhc_defaultSize;
+- (CGSize)ybhc_defaultSize;
+
+/** cell 的复用标识 */
+- (NSString *)ybhc_cellReuseIdentifier;
 
 @end
 
@@ -38,6 +38,18 @@ NS_ASSUME_NONNULL_BEGIN
  配置默认实现类，一般业务就够用了
  */
 @interface YBHCollectionCellConfig : NSObject <YBHCollectionCellConfig>
+
+/** cell 的类类型 */
+@property (nonatomic, strong) Class<YBHCollectionCellProtocol> cellClass;
+
+/** cell 对应的数据模型 */
+@property (nonatomic, strong) id model;
+
+/** cell 的默认大小 (优先级低于 YBHCollectionCellProtocol 代理方法返回的高度) */
+@property (nonatomic, assign) CGSize defaultSize;
+
+/** cell 的复用标识 */
+@property (nonatomic, copy) NSString *cellReuseIdentifier;
 
 @end
 

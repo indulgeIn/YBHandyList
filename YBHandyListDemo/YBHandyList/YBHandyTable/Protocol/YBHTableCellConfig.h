@@ -19,18 +19,18 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 
 /** cell 的类类型 */
-@property (nonatomic, strong) Class<YBHTableCellProtocol> ybht_cellClass;
+- (Class<YBHTableCellProtocol>)ybht_cellClass;
 
 @optional
 
 /** cell 对应的数据模型 */
-@property (nonatomic, strong) id ybht_model;
-
-/** cell 的复用标识 */
-@property (nonatomic, copy, nullable) NSString *ybht_cellReuseIdentifier;
+- (id)ybht_model;
 
 /** cell 的默认高度 (优先级低于 YBHTableCellProtocol 代理方法返回的高度) */
-@property (nonatomic, copy) NSNumber *ybht_defaultHeight;
+- (NSNumber *)ybht_defaultHeight;
+
+/** cell 的复用标识 */
+- (NSString *)ybht_cellReuseIdentifier;
 
 @end
 
@@ -39,6 +39,18 @@ NS_ASSUME_NONNULL_BEGIN
  配置默认实现类，一般业务就够用了
  */
 @interface YBHTableCellConfig : NSObject <YBHTableCellConfig>
+
+/** cell 的类类型 */
+@property (nonatomic, strong) Class<YBHTableCellProtocol> cellClass;
+
+/** cell 对应的数据模型 */
+@property (nonatomic, strong) id model;
+
+/** cell 的默认高度 (优先级低于 YBHTableCellProtocol 代理方法返回的高度) */
+@property (nonatomic, copy) NSNumber *defaultHeight;
+
+/** cell 的复用标识 */
+@property (nonatomic, copy, nullable) NSString *cellReuseIdentifier;
 
 @end
 

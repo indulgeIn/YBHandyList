@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol YBHCollectionCellConfig;
+@class YBHCollectionSection;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -31,9 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param config 配置对象
  @param reuseIdentifier 复用标识
  @param indexPath indexPath
+ @param sectionPack cell 所属 section 的配置，可能会有用
  @return 大小
  */
-+ (CGSize)ybhc_sizeForCellWithConfig:(id<YBHCollectionCellConfig>)config reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath;
++ (CGSize)ybhc_sizeForCellWithConfig:(id<YBHCollectionCellConfig>)config reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath sectionPack:(YBHCollectionSection *)sectionPack;
 
 /** 刷新 UICollectionView */
 @property (nonatomic, copy) void(^ybhc_reloadCollectionView)(void);

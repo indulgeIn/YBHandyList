@@ -14,17 +14,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 一个 section，cell 配置数组 */
 @property (nonatomic, strong, readonly) NSMutableArray<id<YBHTableCellConfig>> *ybht_rowArray;
-
 /** 一个 section，header 配置 */
 @property (nonatomic, strong, nullable) id<YBHTableHeaderFooterConfig> ybht_header;
-
 /** 一个 section，footer 配置 */
 @property (nonatomic, strong, nullable) id<YBHTableHeaderFooterConfig> ybht_footer;
 
 /** 多个 section */
 @property (nonatomic, strong, readonly) NSMutableArray<YBHTableSection *> *ybht_sectionArray;
 
-/** 代理实现者（默认会有实现，可以自定义继承 YBHandyTableIMP 的类，主要场景是需要实现额外的 UITableView 的代理方法） */
+/** 代理实现者，将数组内容转换为列表代理方法的核心类
+ （需要实现额外的 UITableView 的代理方法，可以自定义继承 YBHandyTableIMP 的类并赋值）*/
 @property (nonatomic, strong) __kindof YBHandyTableIMP *ybht_tableIMP;
 
 @end

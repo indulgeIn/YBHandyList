@@ -10,9 +10,22 @@
 
 @implementation YBHTableCellConfig
 
-@synthesize ybht_cellClass = _ybht_cellClass;
-@synthesize ybht_cellReuseIdentifier = _ybht_cellReuseIdentifier;
-@synthesize ybht_model = _ybht_model;
-@synthesize ybht_defaultHeight = _ybht_defaultHeight;
+#pragma mark - <YBHTableCellConfig>
+
+- (Class<YBHTableCellProtocol>)ybht_cellClass {
+    return self.cellClass;
+}
+
+- (id)ybht_model {
+    return self.model;
+}
+
+- (NSNumber *)ybht_defaultHeight {
+    return self.defaultHeight;
+}
+
+- (NSString *)ybht_cellReuseIdentifier {
+    return self.cellReuseIdentifier;
+}
 
 @end

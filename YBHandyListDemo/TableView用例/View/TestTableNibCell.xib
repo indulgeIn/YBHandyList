@@ -19,17 +19,29 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a nib cell." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-rk-SgV">
-                        <rect key="frame" x="105.5" y="11.5" width="109" height="21"/>
+                        <rect key="frame" x="15" y="11.5" width="109" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-AQ-APo">
+                        <rect key="frame" x="241" y="7" width="64" height="30"/>
+                        <state key="normal" title="see more"/>
+                        <connections>
+                            <action selector="clickSeeMoreButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fCq-82-8Yy"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="2dI-rk-SgV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="190-UW-YgB"/>
+                    <constraint firstItem="0Ba-AQ-APo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LmS-Vc-zXf"/>
                     <constraint firstItem="2dI-rk-SgV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="P2t-zw-n3o"/>
+                    <constraint firstItem="2dI-rk-SgV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="YSm-8T-D7G"/>
+                    <constraint firstAttribute="trailing" secondItem="0Ba-AQ-APo" secondAttribute="trailing" constant="15" id="nZD-Og-GGI"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="2dI-rk-SgV" id="acm-4C-ZoX"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

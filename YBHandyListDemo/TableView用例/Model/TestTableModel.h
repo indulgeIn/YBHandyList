@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TestTableCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TestTableModel : NSObject
 
 @property (nonatomic, copy) NSString *text;
+
+@property (nonatomic, assign) BOOL shouldMagnify;
 
 @end
 

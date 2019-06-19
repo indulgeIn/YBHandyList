@@ -31,6 +31,27 @@
     return self.ybhc_firstSection.footer;
 }
 
+- (void)setYbhc_minimumLineSpacing:(CGFloat)ybhc_minimumLineSpacing {
+    self.ybhc_firstSection.minimumLineSpacing = ybhc_minimumLineSpacing;
+}
+- (CGFloat)ybhc_minimumLineSpacing {
+    return self.ybhc_firstSection.minimumLineSpacing;
+}
+
+- (void)setYbhc_minimumInteritemSpacing:(CGFloat)ybhc_minimumInteritemSpacing {
+    self.ybhc_firstSection.minimumInteritemSpacing = ybhc_minimumInteritemSpacing;
+}
+- (CGFloat)ybhc_minimumInteritemSpacing {
+    return self.ybhc_firstSection.minimumInteritemSpacing;
+}
+
+- (void)setYbhc_inset:(UIEdgeInsets)ybhc_inset {
+    self.ybhc_firstSection.inset = ybhc_inset;
+}
+- (UIEdgeInsets)ybhc_inset {
+    return self.ybhc_firstSection.inset;
+}
+
 - (YBHCollectionSection *)ybhc_firstSection {
     if (self.ybhc_sectionArray.count > 0) {
         return self.ybhc_sectionArray[0];
@@ -45,15 +66,14 @@
 static const void *YBHCSectionArrayKey = &YBHCSectionArrayKey;
 - (void)setYbhc_sectionArray:(NSMutableArray<YBHCollectionSection *> * _Nonnull)ybhc_sectionArray {
     objc_setAssociatedObject(self, YBHCSectionArrayKey, ybhc_sectionArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (!self.ybhc_collectionIMP) {
-        self.ybhc_collectionIMP = [YBHandyCollectionIMP new];
-    }
 }
 - (NSMutableArray<YBHCollectionSection *> *)ybhc_sectionArray {
     NSMutableArray *array = objc_getAssociatedObject(self, YBHCSectionArrayKey);
     if (!array) {
         array = [NSMutableArray array];
         self.ybhc_sectionArray = array;
+        
+        [self.ybhc_collectionIMP hash]; //Do nothing.
     }
     return array;
 }
@@ -66,7 +86,12 @@ static const void *YBHCollectionIMPKey = &YBHCollectionIMPKey;
     objc_setAssociatedObject(self, YBHCollectionIMPKey, ybhc_collectionIMP, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (YBHandyCollectionIMP *)ybhc_collectionIMP {
-    return objc_getAssociatedObject(self, YBHCollectionIMPKey);
+    YBHandyCollectionIMP *imp = objc_getAssociatedObject(self, YBHCollectionIMPKey);
+    if (!imp) {
+        imp = [YBHandyCollectionIMP new];
+        self.ybhc_collectionIMP = imp;
+    }
+    return imp;
 }
 
 @end

@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2358914022B9C18E00E0508A /* TestCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358913F22B9C18E00E0508A /* TestCollectionModel.m */; };
+		2358914422B9CBF500E0508A /* TestCollectionNibCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358914222B9CBF500E0508A /* TestCollectionNibCell.m */; };
+		2358914522B9CBF500E0508A /* TestCollectionNibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2358914322B9CBF500E0508A /* TestCollectionNibCell.xib */; };
+		2358914922BA0C1A00E0508A /* TestTableNibCellConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358914822BA0C1A00E0508A /* TestTableNibCellConfig.m */; };
+		2358915122BA145200E0508A /* TestMVVMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358915022BA145200E0508A /* TestMVVMController.m */; };
+		2358915A22BA1C8300E0508A /* TestMVVMOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358915822BA1C8300E0508A /* TestMVVMOneCell.m */; };
+		2358915B22BA1C8300E0508A /* TestMVVMOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2358915922BA1C8300E0508A /* TestMVVMOneCell.xib */; };
+		2358915F22BA1C9000E0508A /* TestMVVMTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358915D22BA1C9000E0508A /* TestMVVMTwoCell.m */; };
+		2358916022BA1C9000E0508A /* TestMVVMTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2358915E22BA1C9000E0508A /* TestMVVMTwoCell.xib */; };
+		2358916422BA1CB100E0508A /* TestMVVMThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358916222BA1CB100E0508A /* TestMVVMThreeCell.m */; };
+		2358916522BA1CB100E0508A /* TestMVVMThreeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2358916322BA1CB100E0508A /* TestMVVMThreeCell.xib */; };
+		2358916B22BA1D8700E0508A /* TestMVVMOneCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358916A22BA1D8700E0508A /* TestMVVMOneCellViewModel.m */; };
+		2358916E22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358916D22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.m */; };
+		2358917122BA1DBF00E0508A /* TestMVVMThreeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358917022BA1DBF00E0508A /* TestMVVMThreeCellViewModel.m */; };
+		2358917422BA1E9D00E0508A /* TestMVVMControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358917322BA1E9D00E0508A /* TestMVVMControllerViewModel.m */; };
+		2358917822BA2DBD00E0508A /* TestMVVMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358917722BA2DBD00E0508A /* TestMVVMModel.m */; };
+		2358917A22BA304800E0508A /* TestMVVM.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2358917922BA304800E0508A /* TestMVVM.plist */; };
 		235A7C0722B8732900159B0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7C0622B8732900159B0F /* AppDelegate.m */; };
 		235A7C0D22B8732900159B0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235A7C0B22B8732900159B0F /* Main.storyboard */; };
 		235A7C0F22B8732A00159B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235A7C0E22B8732A00159B0F /* Assets.xcassets */; };
@@ -54,6 +71,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2358913E22B9C18E00E0508A /* TestCollectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionModel.h; sourceTree = "<group>"; };
+		2358913F22B9C18E00E0508A /* TestCollectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionModel.m; sourceTree = "<group>"; };
+		2358914122B9CBF500E0508A /* TestCollectionNibCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionNibCell.h; sourceTree = "<group>"; };
+		2358914222B9CBF500E0508A /* TestCollectionNibCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionNibCell.m; sourceTree = "<group>"; };
+		2358914322B9CBF500E0508A /* TestCollectionNibCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionNibCell.xib; sourceTree = "<group>"; };
+		2358914722BA0C1A00E0508A /* TestTableNibCellConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableNibCellConfig.h; sourceTree = "<group>"; };
+		2358914822BA0C1A00E0508A /* TestTableNibCellConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableNibCellConfig.m; sourceTree = "<group>"; };
+		2358914F22BA145200E0508A /* TestMVVMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMController.h; sourceTree = "<group>"; };
+		2358915022BA145200E0508A /* TestMVVMController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMController.m; sourceTree = "<group>"; };
+		2358915722BA1C8300E0508A /* TestMVVMOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMOneCell.h; sourceTree = "<group>"; };
+		2358915822BA1C8300E0508A /* TestMVVMOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMOneCell.m; sourceTree = "<group>"; };
+		2358915922BA1C8300E0508A /* TestMVVMOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestMVVMOneCell.xib; sourceTree = "<group>"; };
+		2358915C22BA1C9000E0508A /* TestMVVMTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMTwoCell.h; sourceTree = "<group>"; };
+		2358915D22BA1C9000E0508A /* TestMVVMTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMTwoCell.m; sourceTree = "<group>"; };
+		2358915E22BA1C9000E0508A /* TestMVVMTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestMVVMTwoCell.xib; sourceTree = "<group>"; };
+		2358916122BA1CB100E0508A /* TestMVVMThreeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMThreeCell.h; sourceTree = "<group>"; };
+		2358916222BA1CB100E0508A /* TestMVVMThreeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMThreeCell.m; sourceTree = "<group>"; };
+		2358916322BA1CB100E0508A /* TestMVVMThreeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestMVVMThreeCell.xib; sourceTree = "<group>"; };
+		2358916922BA1D8700E0508A /* TestMVVMOneCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMOneCellViewModel.h; sourceTree = "<group>"; };
+		2358916A22BA1D8700E0508A /* TestMVVMOneCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMOneCellViewModel.m; sourceTree = "<group>"; };
+		2358916C22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMTwoCellViewModel.h; sourceTree = "<group>"; };
+		2358916D22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMTwoCellViewModel.m; sourceTree = "<group>"; };
+		2358916F22BA1DBF00E0508A /* TestMVVMThreeCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMThreeCellViewModel.h; sourceTree = "<group>"; };
+		2358917022BA1DBF00E0508A /* TestMVVMThreeCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMThreeCellViewModel.m; sourceTree = "<group>"; };
+		2358917222BA1E9D00E0508A /* TestMVVMControllerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMControllerViewModel.h; sourceTree = "<group>"; };
+		2358917322BA1E9D00E0508A /* TestMVVMControllerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMControllerViewModel.m; sourceTree = "<group>"; };
+		2358917522BA2CD600E0508A /* YBHandyList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBHandyList.h; sourceTree = "<group>"; };
+		2358917622BA2DBD00E0508A /* TestMVVMModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMModel.h; sourceTree = "<group>"; };
+		2358917722BA2DBD00E0508A /* TestMVVMModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMModel.m; sourceTree = "<group>"; };
+		2358917922BA304800E0508A /* TestMVVM.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TestMVVM.plist; sourceTree = "<group>"; };
 		235A7C0222B8732900159B0F /* YBHandyListDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YBHandyListDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		235A7C0522B8732900159B0F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		235A7C0622B8732900159B0F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,6 +184,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2358914A22BA13E900E0508A /* MVVM架构支撑 */ = {
+			isa = PBXGroup;
+			children = (
+				2358917922BA304800E0508A /* TestMVVM.plist */,
+				2358914E22BA143600E0508A /* Model */,
+				2358914D22BA143200E0508A /* ViewModel */,
+				2358914C22BA142E00E0508A /* View */,
+				2358914B22BA142A00E0508A /* Controller */,
+			);
+			path = "MVVM架构支撑";
+			sourceTree = "<group>";
+		};
+		2358914B22BA142A00E0508A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2358914F22BA145200E0508A /* TestMVVMController.h */,
+				2358915022BA145200E0508A /* TestMVVMController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2358914C22BA142E00E0508A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2358915722BA1C8300E0508A /* TestMVVMOneCell.h */,
+				2358915822BA1C8300E0508A /* TestMVVMOneCell.m */,
+				2358915922BA1C8300E0508A /* TestMVVMOneCell.xib */,
+				2358915C22BA1C9000E0508A /* TestMVVMTwoCell.h */,
+				2358915D22BA1C9000E0508A /* TestMVVMTwoCell.m */,
+				2358915E22BA1C9000E0508A /* TestMVVMTwoCell.xib */,
+				2358916122BA1CB100E0508A /* TestMVVMThreeCell.h */,
+				2358916222BA1CB100E0508A /* TestMVVMThreeCell.m */,
+				2358916322BA1CB100E0508A /* TestMVVMThreeCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2358914D22BA143200E0508A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2358917222BA1E9D00E0508A /* TestMVVMControllerViewModel.h */,
+				2358917322BA1E9D00E0508A /* TestMVVMControllerViewModel.m */,
+				2358916922BA1D8700E0508A /* TestMVVMOneCellViewModel.h */,
+				2358916A22BA1D8700E0508A /* TestMVVMOneCellViewModel.m */,
+				2358916C22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.h */,
+				2358916D22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.m */,
+				2358916F22BA1DBF00E0508A /* TestMVVMThreeCellViewModel.h */,
+				2358917022BA1DBF00E0508A /* TestMVVMThreeCellViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2358914E22BA143600E0508A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2358917622BA2DBD00E0508A /* TestMVVMModel.h */,
+				2358917722BA2DBD00E0508A /* TestMVVMModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		235A7BF922B8732900159B0F = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +269,9 @@
 			isa = PBXGroup;
 			children = (
 				235A7C3722B8733100159B0F /* YBHandyList */,
-				235A7C8022B8BA0C00159B0F /* TestTableView */,
-				235A7C8122B8BA1700159B0F /* TestCollectionView */,
+				235A7C8022B8BA0C00159B0F /* TableView用例 */,
+				235A7C8122B8BA1700159B0F /* CollectionView用例 */,
+				2358914A22BA13E900E0508A /* MVVM架构支撑 */,
 				235A7C0522B8732900159B0F /* AppDelegate.h */,
 				235A7C0622B8732900159B0F /* AppDelegate.m */,
 				235A7C9922B8C42400159B0F /* YBHLPrefixHeader.pch */,
@@ -199,6 +308,7 @@
 		235A7C3722B8733100159B0F /* YBHandyList */ = {
 			isa = PBXGroup;
 			children = (
+				2358917522BA2CD600E0508A /* YBHandyList.h */,
 				235A7C3822B8733900159B0F /* YBHandyCollection */,
 				235A7C3E22B8733900159B0F /* YBHandyTable */,
 			);
@@ -275,24 +385,24 @@
 			path = Implement;
 			sourceTree = "<group>";
 		};
-		235A7C8022B8BA0C00159B0F /* TestTableView */ = {
+		235A7C8022B8BA0C00159B0F /* TableView用例 */ = {
 			isa = PBXGroup;
 			children = (
 				235A7C8522B8BC0B00159B0F /* Model */,
 				235A7C8822B8BC0B00159B0F /* View */,
 				235A7C8B22B8BC0B00159B0F /* Controller */,
 			);
-			path = TestTableView;
+			path = "TableView用例";
 			sourceTree = "<group>";
 		};
-		235A7C8122B8BA1700159B0F /* TestCollectionView */ = {
+		235A7C8122B8BA1700159B0F /* CollectionView用例 */ = {
 			isa = PBXGroup;
 			children = (
 				235A7C9822B8BEBC00159B0F /* Model */,
 				235A7C9722B8BEBA00159B0F /* View */,
 				235A7C9122B8BC7B00159B0F /* Controller */,
 			);
-			path = TestCollectionView;
+			path = "CollectionView用例";
 			sourceTree = "<group>";
 		};
 		235A7C8522B8BC0B00159B0F /* Model */ = {
@@ -312,6 +422,8 @@
 				235A7CA822B8E84700159B0F /* TestTableNibCell.h */,
 				235A7CA922B8E84700159B0F /* TestTableNibCell.m */,
 				235A7CAA22B8E84700159B0F /* TestTableNibCell.xib */,
+				2358914722BA0C1A00E0508A /* TestTableNibCellConfig.h */,
+				2358914822BA0C1A00E0508A /* TestTableNibCellConfig.m */,
 				235A7CAD22B8EB2E00159B0F /* TestTableNibHeader.h */,
 				235A7CAE22B8EB2E00159B0F /* TestTableNibHeader.m */,
 				235A7CB022B8EB3700159B0F /* TestTableNibHeader.xib */,
@@ -340,6 +452,9 @@
 		235A7C9722B8BEBA00159B0F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2358914122B9CBF500E0508A /* TestCollectionNibCell.h */,
+				2358914222B9CBF500E0508A /* TestCollectionNibCell.m */,
+				2358914322B9CBF500E0508A /* TestCollectionNibCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +462,8 @@
 		235A7C9822B8BEBC00159B0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2358913E22B9C18E00E0508A /* TestCollectionModel.h */,
+				2358913F22B9C18E00E0508A /* TestCollectionModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -454,9 +571,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2358917A22BA304800E0508A /* TestMVVM.plist in Resources */,
+				2358916522BA1CB100E0508A /* TestMVVMThreeCell.xib in Resources */,
+				2358916022BA1C9000E0508A /* TestMVVMTwoCell.xib in Resources */,
 				235A7C1222B8732A00159B0F /* LaunchScreen.storyboard in Resources */,
 				235A7CB122B8EB3700159B0F /* TestTableNibHeader.xib in Resources */,
 				235A7C0F22B8732A00159B0F /* Assets.xcassets in Resources */,
+				2358914522B9CBF500E0508A /* TestCollectionNibCell.xib in Resources */,
+				2358915B22BA1C8300E0508A /* TestMVVMOneCell.xib in Resources */,
 				235A7C0D22B8732900159B0F /* Main.storyboard in Resources */,
 				235A7C9622B8BD3E00159B0F /* MainViewController.xib in Resources */,
 				235A7CAC22B8E84700159B0F /* TestTableNibCell.xib in Resources */,
@@ -485,13 +607,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				235A7C9F22B8D75900159B0F /* YBHCollectionSection.m in Sources */,
+				2358914022B9C18E00E0508A /* TestCollectionModel.m in Sources */,
+				2358915F22BA1C9000E0508A /* TestMVVMTwoCell.m in Sources */,
 				235A7C7022B889AF00159B0F /* YBHTableSection.m in Sources */,
 				235A7C9022B8BC0B00159B0F /* TestTableController.m in Sources */,
+				2358917822BA2DBD00E0508A /* TestMVVMModel.m in Sources */,
 				235A7C8422B8BBF300159B0F /* TestCollectionController.m in Sources */,
+				2358916B22BA1D8700E0508A /* TestMVVMOneCellViewModel.m in Sources */,
 				235A7C8E22B8BC0B00159B0F /* TestTableModel.m in Sources */,
+				2358915122BA145200E0508A /* TestMVVMController.m in Sources */,
+				2358916E22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.m in Sources */,
 				235A7C4922B8733900159B0F /* YBHandyTableIMP.m in Sources */,
+				2358914422B9CBF500E0508A /* TestCollectionNibCell.m in Sources */,
 				235A7C4B22B8733900159B0F /* YBHandyCollectionIMP.m in Sources */,
 				235A7C6A22B885C000159B0F /* UICollectionView+YBHandyList.m in Sources */,
+				2358916422BA1CB100E0508A /* TestMVVMThreeCell.m in Sources */,
+				2358914922BA0C1A00E0508A /* TestTableNibCellConfig.m in Sources */,
+				2358917122BA1DBF00E0508A /* TestMVVMThreeCellViewModel.m in Sources */,
 				235A7CAB22B8E84700159B0F /* TestTableNibCell.m in Sources */,
 				235A7C6D22B885DF00159B0F /* UITableView+YBHandyList.m in Sources */,
 				235A7CA222B8D8E200159B0F /* YBHCollectionCellConfig.m in Sources */,
@@ -499,7 +631,9 @@
 				235A7C5D22B877CD00159B0F /* YBHTableCellConfig.m in Sources */,
 				235A7CAF22B8EB2E00159B0F /* TestTableNibHeader.m in Sources */,
 				235A7C8F22B8BC0B00159B0F /* TestTableCell.m in Sources */,
+				2358917422BA1E9D00E0508A /* TestMVVMControllerViewModel.m in Sources */,
 				235A7C1522B8732A00159B0F /* main.m in Sources */,
+				2358915A22BA1C8300E0508A /* TestMVVMOneCell.m in Sources */,
 				235A7C9522B8BD3E00159B0F /* MainViewController.m in Sources */,
 				235A7CA522B8D90900159B0F /* YBHCollectionHeaderFooterConfig.m in Sources */,
 				235A7C0722B8732900159B0F /* AppDelegate.m in Sources */,

@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "TestTableController.h"
 #import "TestCollectionController.h"
+#import "TestMVVMController.h"
 
 @interface MainViewController ()
 
@@ -25,6 +26,9 @@
 }
 - (IBAction)clickCollection:(id)sender {
     [self.navigationController pushViewController:TestCollectionController.new animated:YES];
+}
+- (IBAction)clickMVVM:(id)sender {
+    [self.navigationController pushViewController:TestMVVMController.new animated:YES];
 }
 
 @end

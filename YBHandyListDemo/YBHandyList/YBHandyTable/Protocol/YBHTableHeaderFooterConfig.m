@@ -10,9 +10,22 @@
 
 @implementation YBHTableHeaderFooterConfig
 
-@synthesize ybht_headerFooterClass = _ybht_headerFooterClass;
-@synthesize ybht_model = _ybht_model;
-@synthesize ybht_headerFooterReuseIdentifier = _ybht_headerFooterReuseIdentifier;
-@synthesize ybht_defaultHeight = _ybht_defaultHeight;
+#pragma mark - <YBHTableHeaderFooterConfig>
+
+- (Class<YBHTableHeaderFooterProtocol>)ybht_headerFooterClass {
+    return self.headerFooterClass;
+}
+
+- (id)ybht_model {
+    return self.model;
+}
+
+- (NSNumber *)ybht_defaultHeight {
+    return self.defaultHeight;
+}
+
+- (NSString *)ybht_headerFooterReuseIdentifier {
+    return self.headerFooterReuseIdentifier;
+}
 
 @end

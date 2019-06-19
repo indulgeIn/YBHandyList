@@ -8,8 +8,7 @@
 
 #import "TestTableCell.h"
 #import "TestTableModel.h"
-
-#import "UITableView+YBHandyList.h"
+#import "YBHandyList.h"
 
 @interface TestTableCell () <YBHTableCellProtocol>
 @property (nonatomic, strong) UIButton *button;
@@ -34,19 +33,28 @@
 
 #pragma mark - <YBHTableCellProtocol>
 
+@synthesize ybht_reloadTableView = _ybht_reloadTableView;
+
 - (void)ybht_setCellConfig:(id<YBHTableCellConfig>)config {
     TestTableModel *model = config.ybht_model;
+    self.model = model;
+    //拿到数据 Model 更新 UI
     self.textLabel.text = model.text;
+    [self.button setTitle:(model.shouldMagnify ? @"缩小" : @"放大") forState:UIControlStateNormal];
 }
 
 + (CGFloat)ybht_heightForCellWithConfig:(nonnull id<YBHTableCellConfig>)config reuseIdentifier:(nonnull NSString *)reuseIdentifier indexPath:(nonnull NSIndexPath *)indexPath {
-    return UITableViewAutomaticDimension;
+    //根据提供的数据计算返回高度
+    TestTableModel *model = config.ybht_model;
+    return model.shouldMagnify ? 100 : UITableViewAutomaticDimension;
 }
 
 #pragma mark - event
 
 - (void)clickButton:(UIButton *)button {
-
+    self.model.shouldMagnify = !self.model.shouldMagnify;
+    //刷新列表
+    self.ybht_reloadTableView();
 }
 
 #pragma mark - getter
@@ -55,7 +63,7 @@
     if (!_button) {
         _button = [UIButton buttonWithType:UIButtonTypeSystem];
         _button.bounds = CGRectMake(0, 0, 80, 40);
-        [_button setTitle:@"点击" forState:UIControlStateNormal];
+        [_button setTitle:@"刷新Table" forState:UIControlStateNormal];
         [_button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _button;

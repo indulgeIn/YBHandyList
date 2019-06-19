@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol YBHCollectionHeaderFooterConfig;
+@class YBHCollectionSection;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -29,9 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param config 配置对象
  @param reuseIdentifier 复用标识
  @param section section
+ @param sectionPack cell 所属 section 的配置，可能会有用
  @return 高度
  */
-+ (CGSize)ybhc_sizeForHeaderFooterWithConfig:(id<YBHCollectionHeaderFooterConfig>)config reuseIdentifier:(NSString *)reuseIdentifier section:(NSInteger)section;
++ (CGSize)ybhc_sizeForHeaderFooterWithConfig:(id<YBHCollectionHeaderFooterConfig>)config reuseIdentifier:(NSString *)reuseIdentifier section:(NSInteger)section sectionPack:(YBHCollectionSection *)sectionPack;
 
 @optional
 

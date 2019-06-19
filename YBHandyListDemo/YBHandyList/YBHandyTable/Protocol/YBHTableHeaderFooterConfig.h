@@ -18,18 +18,18 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 
 /** header/footer 类类型 */
-@property (nonatomic, strong) Class<YBHTableHeaderFooterProtocol> ybht_headerFooterClass;
+- (Class<YBHTableHeaderFooterProtocol>)ybht_headerFooterClass;
 
 @optional
 
 /** header/footer 对应的数据模型 */
-@property (nonatomic, strong) id ybht_model;
-
-/** header/footer 的复用标识 */
-@property (nonatomic, copy) NSString *ybht_headerFooterReuseIdentifier;
+- (id)ybht_model;
 
 /** header/footer 的默认高度 (优先级低于 YBHTableCellProtocol 代理方法返回的高度) */
-@property (nonatomic, copy) NSNumber *ybht_defaultHeight;
+- (NSNumber *)ybht_defaultHeight;
+
+/** header/footer 的复用标识 */
+- (NSString *)ybht_headerFooterReuseIdentifier;
 
 @end
 
@@ -38,6 +38,18 @@ NS_ASSUME_NONNULL_BEGIN
  配置默认实现类，一般业务就够用了
  */
 @interface YBHTableHeaderFooterConfig : NSObject <YBHTableHeaderFooterConfig>
+
+/** header/footer 类类型 */
+@property (nonatomic, strong) Class<YBHTableHeaderFooterProtocol> headerFooterClass;
+
+/** header/footer 对应的数据模型 */
+@property (nonatomic, strong) id model;
+
+/** header/footer 的默认高度 (优先级低于 YBHTableCellProtocol 代理方法返回的高度) */
+@property (nonatomic, copy) NSNumber *defaultHeight;
+
+/** header/footer 的复用标识 */
+@property (nonatomic, copy) NSString *headerFooterReuseIdentifier;
 
 @end
 

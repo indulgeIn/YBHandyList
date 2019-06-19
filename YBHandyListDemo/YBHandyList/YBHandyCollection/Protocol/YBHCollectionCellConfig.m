@@ -10,9 +10,22 @@
 
 @implementation YBHCollectionCellConfig
 
-@synthesize ybhc_cellClass = _ybhc_cellClass;
-@synthesize ybhc_cellReuseIdentifier = _ybhc_cellReuseIdentifier;
-@synthesize ybhc_model = _ybhc_model;
-@synthesize ybhc_defaultSize = _ybhc_defaultSize;
+#pragma mark - <YBHCollectionCellConfig>
+
+- (Class<YBHCollectionCellProtocol>)ybhc_cellClass {
+    return self.cellClass;
+}
+
+- (id)ybhc_model {
+    return self.model;
+}
+
+- (CGSize)ybhc_defaultSize {
+    return self.defaultSize;
+}
+
+- (NSString *)ybhc_cellReuseIdentifier {
+    return self.cellReuseIdentifier;
+}
 
 @end

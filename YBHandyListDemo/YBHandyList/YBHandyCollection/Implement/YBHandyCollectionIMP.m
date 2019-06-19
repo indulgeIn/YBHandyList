@@ -22,8 +22,26 @@
         _reuseCellSet = [NSMutableSet set];
         _reuseHeaderSet = [NSMutableSet set];
         _reuseFooterSet = [NSMutableSet set];
+        
+        _enabledFlowLayoutProperties = NO;
     }
     return self;
+}
+
+#pragma mark - forword
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    YBHCollectionSection *hcSection = self.sectionArray[indexPath.section];
+    id<YBHCollectionCellConfig> config = hcSection.rowArray[indexPath.row];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ybhc_IMP:collectionView:didSelectItemAtIndexPath:config:)]) {
+        [self.delegate ybhc_IMP:self collectionView:collectionView didSelectItemAtIndexPath:indexPath config:config];
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ybhc_IMP:scrollViewDidScroll:)]) {
+        [self.delegate ybhc_IMP:self scrollViewDidScroll:scrollView];
+    }
 }
 
 #pragma mark - <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -38,10 +56,10 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     YBHCollectionSection *hcSection = self.sectionArray[indexPath.section];
-    id<YBHCollectionCellConfig> cellConfig = hcSection.rowArray[indexPath.row];
+    id<YBHCollectionCellConfig> config = hcSection.rowArray[indexPath.row];
 
-    Class cellClass = cellConfig.ybhc_cellClass ?: UICollectionViewCell.self;
-    NSString *identifier = [self reuseIdentifierForCellConfig:cellConfig];
+    Class cellClass = [self validClassForCellConfig:config];
+    NSString *identifier = [self reuseIdentifierForCellConfig:config];
     
     if (![_reuseCellSet containsObject:identifier]) {
         NSString *path = [[NSBundle mainBundle] pathForResource:NSStringFromClass(cellClass) ofType:@"nib"];
@@ -58,7 +76,7 @@
     if ([cell conformsToProtocol:@protocol(YBHCollectionCellProtocol)]) {
         UICollectionViewCell<YBHCollectionCellProtocol> *tmpCell = (UICollectionViewCell<YBHCollectionCellProtocol> *)cell;
 
-        [tmpCell ybhc_setCellConfig:cellConfig];
+        [tmpCell ybhc_setCellConfig:config];
 
         if ([tmpCell respondsToSelector:@selector(setYbhc_reloadCollectionView:)]) {
             __weak typeof(collectionView) wCollectionView = collectionView;
@@ -88,7 +106,7 @@
         return nil;
     }
     
-    Class cls = config.ybhc_headerFooterClass ?: UICollectionReusableView.self;
+    Class cls = [self validClassForHeaderFooterConfig:config];
     NSString *identifier = [self reuseIdentifierForHeaderFooterConfig:config];
     
     if (![reuseSet containsObject:identifier]) {
@@ -121,18 +139,18 @@
     return view;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-
-}
-
 #pragma mark - <UICollectionViewDelegateFlowLayout>
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.enabledFlowLayoutProperties && [collectionViewLayout isKindOfClass:UICollectionViewFlowLayout.self]) {
+        return ((UICollectionViewFlowLayout *)collectionViewLayout).itemSize;
+    }
+    
     YBHCollectionSection *htSection = self.sectionArray[indexPath.section];
     id<YBHCollectionCellConfig> config = htSection.rowArray[indexPath.row];
     
-    if ([config.ybhc_cellClass respondsToSelector:@selector(ybhc_sizeForCellWithConfig:reuseIdentifier:indexPath:)]) {
-        return [config.ybhc_cellClass ybhc_sizeForCellWithConfig:config reuseIdentifier:[self reuseIdentifierForCellConfig:config] indexPath:indexPath];
+    if ([config.ybhc_cellClass respondsToSelector:@selector(ybhc_sizeForCellWithConfig:reuseIdentifier:indexPath:sectionPack:)]) {
+        return [config.ybhc_cellClass ybhc_sizeForCellWithConfig:config reuseIdentifier:[self reuseIdentifierForCellConfig:config] indexPath:indexPath sectionPack:htSection];
     }
     if ([config respondsToSelector:@selector(ybhc_defaultSize)] && !CGSizeEqualToSize(config.ybhc_defaultSize, CGSizeZero)) {
         return config.ybhc_defaultSize;
@@ -141,27 +159,67 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    if (self.enabledFlowLayoutProperties && [collectionViewLayout isKindOfClass:UICollectionViewFlowLayout.self]) {
+        return ((UICollectionViewFlowLayout *)collectionViewLayout).headerReferenceSize;
+    }
+    
     YBHCollectionSection *htSection = self.sectionArray[section];
     id<YBHCollectionHeaderFooterConfig> config = htSection.header;
     
-    return [self sizeForHeaderFooterWithConfig:config section:section];
+    return [self sizeForHeaderFooterWithConfig:config section:section sectionPack:htSection];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-    YBHCollectionSection *htSection = self.sectionArray[section];
-    id<YBHCollectionHeaderFooterConfig> config = htSection.header;
+    if (self.enabledFlowLayoutProperties && [collectionViewLayout isKindOfClass:UICollectionViewFlowLayout.self]) {
+        return ((UICollectionViewFlowLayout *)collectionViewLayout).footerReferenceSize;
+    }
     
-    return [self sizeForHeaderFooterWithConfig:config section:section];
+    YBHCollectionSection *htSection = self.sectionArray[section];
+    id<YBHCollectionHeaderFooterConfig> config = htSection.footer;
+    
+    return [self sizeForHeaderFooterWithConfig:config section:section sectionPack:htSection];
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    if (self.enabledFlowLayoutProperties && [collectionViewLayout isKindOfClass:UICollectionViewFlowLayout.self]) {
+        return ((UICollectionViewFlowLayout *)collectionViewLayout).minimumLineSpacing;
+    }
+    
+    return self.sectionArray[section].minimumLineSpacing;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    if (self.enabledFlowLayoutProperties && [collectionViewLayout isKindOfClass:UICollectionViewFlowLayout.self]) {
+        return ((UICollectionViewFlowLayout *)collectionViewLayout).minimumInteritemSpacing;
+    }
+    
+    return self.sectionArray[section].minimumInteritemSpacing;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    if (self.enabledFlowLayoutProperties && [collectionViewLayout isKindOfClass:UICollectionViewFlowLayout.self]) {
+        return ((UICollectionViewFlowLayout *)collectionViewLayout).sectionInset;
+    }
+    
+    return self.sectionArray[section].inset;
 }
 
 #pragma mark - private
+
+- (Class)validClassForCellConfig:(id<YBHCollectionCellConfig>)config {
+    return config.ybhc_cellClass ?: UICollectionViewCell.self;
+}
+
+- (Class)validClassForHeaderFooterConfig:(id<YBHCollectionHeaderFooterConfig>)config {
+    return config.ybhc_headerFooterClass ?: UICollectionReusableView.self;
+}
 
 - (NSString *)reuseIdentifierForCellConfig:(id<YBHCollectionCellConfig>)config {
     NSString *identifier;
     if (config && [config respondsToSelector:@selector(ybhc_cellReuseIdentifier)]) {
         identifier = config.ybhc_cellReuseIdentifier;
     }
-    return identifier ?: NSStringFromClass(config.ybhc_cellClass);
+    return identifier ?: NSStringFromClass([self validClassForCellConfig:config]);
 }
 
 - (NSString *)reuseIdentifierForHeaderFooterConfig:(id<YBHCollectionHeaderFooterConfig>)config {
@@ -169,12 +227,12 @@
     if (config && [config respondsToSelector:@selector(ybhc_headerFooterReuseIdentifier)]) {
         identifier = [config ybhc_headerFooterReuseIdentifier];
     }
-    return identifier ?: NSStringFromClass(config.ybhc_headerFooterClass);
+    return identifier ?: NSStringFromClass([self validClassForHeaderFooterConfig:config]);
 }
 
-- (CGSize)sizeForHeaderFooterWithConfig:(id<YBHCollectionHeaderFooterConfig>)config section:(NSInteger)section {
-    if (config && [config.ybhc_headerFooterClass respondsToSelector:@selector(ybhc_sizeForHeaderFooterWithConfig:reuseIdentifier:section:)]) {
-        return [config.ybhc_headerFooterClass ybhc_sizeForHeaderFooterWithConfig:config reuseIdentifier:[self reuseIdentifierForHeaderFooterConfig:config] section:section];
+- (CGSize)sizeForHeaderFooterWithConfig:(id<YBHCollectionHeaderFooterConfig>)config section:(NSInteger)section sectionPack:(YBHCollectionSection *)sectionPack {
+    if (config && [config.ybhc_headerFooterClass respondsToSelector:@selector(ybhc_sizeForHeaderFooterWithConfig:reuseIdentifier:section:sectionPack:)]) {
+        return [config.ybhc_headerFooterClass ybhc_sizeForHeaderFooterWithConfig:config reuseIdentifier:[self reuseIdentifierForHeaderFooterConfig:config] section:section sectionPack:sectionPack];
     }
     if ([config respondsToSelector:@selector(ybhc_defaultSize)] && !CGSizeEqualToSize(config.ybhc_defaultSize, CGSizeZero)) {
         return config.ybhc_defaultSize;

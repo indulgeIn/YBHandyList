@@ -22,6 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
 /** UICollectionView 的 cell 配置数组 */
 @property (nonatomic, strong, readonly) NSMutableArray<id<YBHCollectionCellConfig>> *rowArray;
 
+/** cell 间距 */
+@property (nonatomic, assign) CGFloat minimumLineSpacing;
+/** cell 间距 */
+@property (nonatomic, assign) CGFloat minimumInteritemSpacing;
+/** section 外边距 */
+@property (nonatomic, assign) UIEdgeInsets inset;
+
 @end
 
 NS_ASSUME_NONNULL_END

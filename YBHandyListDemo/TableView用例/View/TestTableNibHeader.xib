@@ -22,7 +22,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Qh2-pn-wRk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3Yu-wc-t9E"/>
                 <constraint firstItem="Qh2-pn-wRk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gqd-7C-7pQ"/>

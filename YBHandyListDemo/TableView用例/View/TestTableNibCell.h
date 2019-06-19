@@ -10,6 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class TestTableNibCell;
+
+@protocol TestTableNibCellDelegate <NSObject>
+
+- (void)testTableNibCell:(TestTableNibCell *)cell clickSeeMoreButton:(UIButton *)button;
+
+@end
+
 @interface TestTableNibCell : UITableViewCell
 
 @end

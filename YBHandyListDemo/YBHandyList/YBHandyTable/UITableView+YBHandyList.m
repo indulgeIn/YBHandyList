@@ -45,15 +45,14 @@
 static const void *YBHTSectionArrayKey = &YBHTSectionArrayKey;
 - (void)setYbht_sectionArray:(NSMutableArray<YBHTableSection *> * _Nonnull)ybht_sectionArray {
     objc_setAssociatedObject(self, YBHTSectionArrayKey, ybht_sectionArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (!self.ybht_tableIMP) {
-        self.ybht_tableIMP = [YBHandyTableIMP new];
-    }
 }
 - (NSMutableArray<YBHTableSection *> *)ybht_sectionArray {
     NSMutableArray *array = objc_getAssociatedObject(self, YBHTSectionArrayKey);
     if (!array) {
         array = [NSMutableArray array];
         self.ybht_sectionArray = array;
+        
+        [self.ybht_tableIMP hash]; //Do nothing.
     }
     return array;
 }
@@ -66,7 +65,12 @@ static const void *YBHTableIMPKey = &YBHTableIMPKey;
     objc_setAssociatedObject(self, YBHTableIMPKey, ybhl_tableIMP, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (YBHandyTableIMP *)ybht_tableIMP {
-    return objc_getAssociatedObject(self, YBHTableIMPKey);
+    YBHandyTableIMP *imp = objc_getAssociatedObject(self, YBHTableIMPKey);
+    if (!imp) {
+        imp = [YBHandyTableIMP new];
+        self.ybht_tableIMP = imp;
+    }
+    return imp;
 }
 
 @end

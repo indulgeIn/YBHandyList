@@ -10,9 +10,29 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class YBHandyTableIMP;
+
+@protocol YBHandyTableIMPDelegate <NSObject>
+@optional
+
+/**
+ 点击了某个 cell
+ */
+- (void)ybht_IMP:(YBHandyTableIMP *)imp tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath config:(id<YBHTableCellConfig>)config;
+
+/**
+ 滚动回调
+ */
+- (void)ybht_IMP:(YBHandyTableIMP *)imp scrollViewDidScroll:(UIScrollView *)scrollView;
+
+@end
+
 @interface YBHandyTableIMP : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-/** 数据源（可以访问该属性，但不要更改其指针指向，也不要去更改内部元素） */
+/** 代理 (提供 UITableView 常用代理方法转发) */
+@property (nonatomic, weak) id<YBHandyTableIMPDelegate> delegate;
+
+/** 数据源 */
 @property (nonatomic, strong) NSMutableArray<YBHTableSection *> *sectionArray;
 
 @end

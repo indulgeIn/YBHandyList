@@ -7,11 +7,13 @@
 //
 
 #import "TestTableNibHeader.h"
+#import "UITableView+YBHandyList.h"
 
 @implementation TestTableNibHeader
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.contentView.backgroundColor = UIColor.whiteColor;
 }
 
 @end

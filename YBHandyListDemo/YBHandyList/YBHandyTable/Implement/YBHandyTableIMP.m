@@ -10,6 +10,22 @@
 
 @implementation YBHandyTableIMP
 
+#pragma mark - forword
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    YBHTableSection *htSection = self.sectionArray[indexPath.section];
+    id<YBHTableCellConfig> config = htSection.rowArray[indexPath.row];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ybht_IMP:tableView:didSelectRowAtIndexPath:config:)]) {
+        [self.delegate ybht_IMP:self tableView:tableView didSelectRowAtIndexPath:indexPath config:config];
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ybht_IMP:scrollViewDidScroll:)]) {
+        [self.delegate ybht_IMP:self scrollViewDidScroll:scrollView];
+    }
+}
+
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,10 +81,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     YBHTableSection *htSection = self.sectionArray[indexPath.section];
-    id<YBHTableCellConfig> cellConfig = htSection.rowArray[indexPath.row];
+    id<YBHTableCellConfig> config = htSection.rowArray[indexPath.row];
     
-    Class cellClass = cellConfig.ybht_cellClass ?: UITableViewCell.self;
-    NSString *identifier = [self reuseIdentifierForCellConfig:cellConfig];
+    Class cellClass = [self validClassForCellConfig:config];
+    NSString *identifier = [self reuseIdentifierForCellConfig:config];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         NSString *path = [[NSBundle mainBundle] pathForResource:NSStringFromClass(cellClass) ofType:@"nib"];
@@ -83,7 +99,7 @@
     if ([cell conformsToProtocol:@protocol(YBHTableCellProtocol)]) {
         UITableViewCell<YBHTableCellProtocol> *tmpCell = (UITableViewCell<YBHTableCellProtocol> *)cell;
         
-        [tmpCell ybht_setCellConfig:cellConfig];
+        [tmpCell ybht_setCellConfig:config];
         
         if ([tmpCell respondsToSelector:@selector(setYbht_reloadTableView:)]) {
             __weak typeof(tableView) wTableView = tableView;
@@ -100,12 +116,20 @@
 
 #pragma mark - private
 
+- (Class)validClassForCellConfig:(id<YBHTableCellConfig>)config {
+    return config.ybht_cellClass ?: UITableViewCell.self;
+}
+
+- (Class)validClassForHeaderFooterConfig:(id<YBHTableHeaderFooterConfig>)config {
+    return config.ybht_headerFooterClass ?: UIView.self;
+}
+
 - (NSString *)reuseIdentifierForCellConfig:(id<YBHTableCellConfig>)config {
     NSString *identifier;
     if (config && [config respondsToSelector:@selector(ybht_cellReuseIdentifier)]) {
         identifier = config.ybht_cellReuseIdentifier;
     }
-    return identifier ?: NSStringFromClass(config.ybht_cellClass);
+    return identifier ?: NSStringFromClass([self validClassForCellConfig:config]);
 }
 
 - (NSString *)reuseIdentifierForHeaderFooterConfig:(id<YBHTableHeaderFooterConfig>)config {
@@ -113,7 +137,7 @@
     if (config && [config respondsToSelector:@selector(ybht_headerFooterReuseIdentifier)]) {
         identifier = [config ybht_headerFooterReuseIdentifier];
     }
-    return identifier ?: NSStringFromClass(config.ybht_headerFooterClass);
+    return identifier ?: NSStringFromClass([self validClassForHeaderFooterConfig:config]);
 }
 
 - (CGFloat)heightForHeaderFooterWithTableView:(UITableView *)tableView config:(id<YBHTableHeaderFooterConfig>)config section:(NSInteger)section {
@@ -129,7 +153,7 @@
 - (__kindof UIView *)viewForHeaderFooterWithTableView:(UITableView *)tableView config:(id<YBHTableHeaderFooterConfig>)config section:(NSInteger)section {
     if (!config) return nil;
     
-    Class headerFooterClass = config.ybht_headerFooterClass ?: UIView.self;
+    Class headerFooterClass = [self validClassForHeaderFooterConfig:config];
     NSString *identifier = [self reuseIdentifierForHeaderFooterConfig:config];
     
     UIView *view = nil;

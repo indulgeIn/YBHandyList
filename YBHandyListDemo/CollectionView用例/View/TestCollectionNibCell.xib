@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TestCollectionNibCell">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="121"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="281" height="121"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a nib cell." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22B-aS-YJS">
+                        <rect key="frame" x="15" y="15" width="251" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <color key="textColor" red="0.95294117649999999" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYB-D0-Vip">
+                        <rect key="frame" x="15" y="39.5" width="251" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.95294117649999999" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="JYB-D0-Vip" firstAttribute="top" secondItem="22B-aS-YJS" secondAttribute="bottom" constant="10" id="DUI-UO-lLy"/>
+                <constraint firstAttribute="trailing" secondItem="JYB-D0-Vip" secondAttribute="trailing" constant="15" id="GxR-79-5If"/>
+                <constraint firstItem="22B-aS-YJS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="Pul-Mi-fDr"/>
+                <constraint firstItem="22B-aS-YJS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="nhg-XG-UJH"/>
+                <constraint firstItem="JYB-D0-Vip" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="sbZ-0e-WJG"/>
+                <constraint firstAttribute="trailing" secondItem="22B-aS-YJS" secondAttribute="trailing" constant="15" id="xhr-nS-IwE"/>
+            </constraints>
+            <size key="customSize" width="281" height="121"/>
+            <connections>
+                <outlet property="textLabel" destination="JYB-D0-Vip" id="TEr-cy-ZrZ"/>
+            </connections>
+            <point key="canvasLocation" x="-9.4202898550724647" y="96.763392857142847"/>
+        </collectionViewCell>
+    </objects>
+</document>

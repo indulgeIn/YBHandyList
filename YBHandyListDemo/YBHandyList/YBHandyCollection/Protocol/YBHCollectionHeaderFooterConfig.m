@@ -10,9 +10,22 @@
 
 @implementation YBHCollectionHeaderFooterConfig
 
-@synthesize ybhc_headerFooterClass = _ybhc_headerFooterClass;
-@synthesize ybhc_model = _ybhc_model;
-@synthesize ybhc_headerFooterReuseIdentifier = _ybhc_headerFooterReuseIdentifier;
-@synthesize ybhc_defaultSize = _ybhc_defaultSize;
+#pragma mark - <YBHCollectionHeaderFooterConfig>
+
+- (Class<YBHCollectionHeaderFooterProtocol>)ybhc_headerFooterClass {
+    return self.headerFooterClass;
+}
+
+- (id)ybhc_model {
+    return self.model;
+}
+
+- (CGSize)ybhc_defaultSize {
+    return self.defaultSize;
+}
+
+- (NSString *)ybhc_headerFooterReuseIdentifier {
+    return self.headerFooterReuseIdentifier;
+}
 
 @end

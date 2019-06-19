@@ -19,26 +19,40 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVO-aP-IU0">
-                    <rect key="frame" x="91" y="389" width="233" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVO-aP-IU0">
+                    <rect key="frame" x="90.5" y="200" width="233" height="48"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <state key="normal" title="UITableView用例"/>
                     <connections>
                         <action selector="clickButton:" destination="-1" eventType="touchUpInside" id="oe8-95-4am"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCl-tz-Lsu">
-                    <rect key="frame" x="57" y="506" width="300" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCl-tz-Lsu">
+                    <rect key="frame" x="57" y="273" width="300" height="48"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <state key="normal" title="UICollectionView用例"/>
                     <connections>
                         <action selector="clickCollection:" destination="-1" eventType="touchUpInside" id="cgm-tx-Tkp"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sat-4H-wkh">
+                    <rect key="frame" x="99" y="346" width="216" height="48"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="MVVM架构支撑"/>
+                    <connections>
+                        <action selector="clickMVVM:" destination="-1" eventType="touchUpInside" id="Bou-mf-dYx"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Sat-4H-wkh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GPa-zH-UND"/>
+                <constraint firstItem="VCl-tz-Lsu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HSy-0L-Qbd"/>
+                <constraint firstItem="wVO-aP-IU0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="LeU-fh-iCe"/>
+                <constraint firstItem="VCl-tz-Lsu" firstAttribute="top" secondItem="wVO-aP-IU0" secondAttribute="bottom" constant="25" id="Tg5-5Q-wBw"/>
+                <constraint firstItem="Sat-4H-wkh" firstAttribute="top" secondItem="VCl-tz-Lsu" secondAttribute="bottom" constant="25" id="r9Y-yF-NLe"/>
+                <constraint firstItem="wVO-aP-IU0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="s2j-gN-VR4"/>
+            </constraints>
             <point key="canvasLocation" x="-43" y="54"/>
         </view>
     </objects>
