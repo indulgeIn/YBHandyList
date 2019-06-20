@@ -1,8 +1,8 @@
 # YBHandyList
 
-[![Cocoapods](https://img.shields.io/cocoapods/v/YBModelFile.svg)](https://cocoapods.org/pods/YBHandyList)&nbsp;
-[![Cocoapods](https://img.shields.io/cocoapods/p/YBModelFile.svg)](https://github.com/indulgeIn/YBHandyList)&nbsp;
-[![License](https://img.shields.io/github/license/indulgeIn/YBModelFile.svg)](https://github.com/indulgeIn/YBHandyList)&nbsp;
+[![Cocoapods](https://img.shields.io/cocoapods/v/YBHandyList.svg)](https://cocoapods.org/pods/YBHandyList)&nbsp;
+[![Cocoapods](https://img.shields.io/cocoapods/p/YBHandyList.svg)](https://github.com/indulgeIn/YBHandyList)&nbsp;
+[![License](https://img.shields.io/github/license/indulgeIn/YBHandyList.svg)](https://github.com/indulgeIn/YBHandyList)&nbsp;
 
 
 让 UITableView / UICollectionView 更加简单优雅，轻易实现列表动态化、模块化、MVVM 架构。
