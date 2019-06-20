@@ -240,4 +240,13 @@
     return CGSizeZero;
 }
 
+#pragma mark - getter
+
+- (NSMutableArray<YBHCollectionSection *> *)sectionArray {
+    if (!_sectionArray) {
+        _sectionArray = [NSMutableArray array];
+    }
+    return _sectionArray;
+}
+
 @end

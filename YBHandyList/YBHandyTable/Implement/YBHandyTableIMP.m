@@ -191,4 +191,13 @@
     return view;
 }
 
+#pragma mark - getter
+
+- (NSMutableArray<YBHTableSection *> *)sectionArray {
+    if (!_sectionArray) {
+        _sectionArray = [NSMutableArray array];
+    }
+    return _sectionArray;
+}
+
 @end
