@@ -10,14 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class TestTableCell;
-
-@protocol TestTableCellDelegate <NSObject>
-
-- (void)testTableCellCell:(TestTableCell *)cell clickButton:(UIButton *)button;
-
-@end
-
 @interface TestTableCell : UITableViewCell
 
 @end
