@@ -96,5 +96,5 @@ Demo 中有个简单的案例。
 
 实际上 MVVM 架构中的 ViewModel 完全可以作为前面所说的 Config 对象，只需要 ViewModel 实现 Config 协议就行了，然后每一个 Cell / Header / Footer 对应一个 ViewModel。
 
-实际上组件对架构是无感的，IOP 模式让它能在大部分场景无障碍实施。
+**组件对架构是无感知的，IOP 模式让它能在大部分场景无障碍实施。**
 
