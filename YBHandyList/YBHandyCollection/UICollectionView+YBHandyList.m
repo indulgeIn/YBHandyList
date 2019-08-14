@@ -73,7 +73,7 @@ static const void *YBHCSectionArrayKey = &YBHCSectionArrayKey;
         array = [NSMutableArray array];
         self.ybhc_sectionArray = array;
         
-        [self.ybhc_collectionIMP hash]; //Do nothing.
+        [self ybhc_collectionIMP]; //Just call.
     }
     return array;
 }

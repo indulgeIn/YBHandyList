@@ -27,6 +27,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+/**
+ 代理实现类，可以直接抽出来作为 UITableView 的 delegate 和 dataSource，若想实现更多的代理方法，继承于该类在子类中拓展就行了。
+ */
 @interface YBHandyTableIMP : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 /** 代理 (提供 UITableView 常用代理方法转发) */

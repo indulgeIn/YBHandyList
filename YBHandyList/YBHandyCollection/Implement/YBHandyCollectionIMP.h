@@ -26,6 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+/**
+ 代理实现类，可以直接抽出来作为 UICollectionView 的 delegate 和 dataSource，若想实现更多的代理方法，继承于该类在子类中拓展就行了。
+ */
 @interface YBHandyCollectionIMP : NSObject <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 /** 代理 (提供 UICollectionView 常用代理方法转发) */

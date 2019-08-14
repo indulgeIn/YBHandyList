@@ -52,7 +52,7 @@ static const void *YBHTSectionArrayKey = &YBHTSectionArrayKey;
         array = [NSMutableArray array];
         self.ybht_sectionArray = array;
         
-        [self.ybht_tableIMP hash]; //Do nothing.
+        [self ybht_tableIMP]; //Just call.
     }
     return array;
 }
