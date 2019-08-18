@@ -11,19 +11,6 @@
 		2358914422B9CBF500E0508A /* TestCollectionNibCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358914222B9CBF500E0508A /* TestCollectionNibCell.m */; };
 		2358914522B9CBF500E0508A /* TestCollectionNibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2358914322B9CBF500E0508A /* TestCollectionNibCell.xib */; };
 		2358914922BA0C1A00E0508A /* TestTableNibCellConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358914822BA0C1A00E0508A /* TestTableNibCellConfig.m */; };
-		2358915122BA145200E0508A /* TestMVVMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358915022BA145200E0508A /* TestMVVMController.m */; };
-		2358915A22BA1C8300E0508A /* TestMVVMOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358915822BA1C8300E0508A /* TestMVVMOneCell.m */; };
-		2358915B22BA1C8300E0508A /* TestMVVMOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2358915922BA1C8300E0508A /* TestMVVMOneCell.xib */; };
-		2358915F22BA1C9000E0508A /* TestMVVMTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358915D22BA1C9000E0508A /* TestMVVMTwoCell.m */; };
-		2358916022BA1C9000E0508A /* TestMVVMTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2358915E22BA1C9000E0508A /* TestMVVMTwoCell.xib */; };
-		2358916422BA1CB100E0508A /* TestMVVMThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358916222BA1CB100E0508A /* TestMVVMThreeCell.m */; };
-		2358916522BA1CB100E0508A /* TestMVVMThreeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2358916322BA1CB100E0508A /* TestMVVMThreeCell.xib */; };
-		2358916B22BA1D8700E0508A /* TestMVVMOneCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358916A22BA1D8700E0508A /* TestMVVMOneCellViewModel.m */; };
-		2358916E22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358916D22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.m */; };
-		2358917122BA1DBF00E0508A /* TestMVVMThreeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358917022BA1DBF00E0508A /* TestMVVMThreeCellViewModel.m */; };
-		2358917422BA1E9D00E0508A /* TestMVVMControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358917322BA1E9D00E0508A /* TestMVVMControllerViewModel.m */; };
-		2358917822BA2DBD00E0508A /* TestMVVMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358917722BA2DBD00E0508A /* TestMVVMModel.m */; };
-		2358917A22BA304800E0508A /* TestMVVM.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2358917922BA304800E0508A /* TestMVVM.plist */; };
 		2358919B22BA87D300E0508A /* YBHandyCollectionIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358917F22BA87D200E0508A /* YBHandyCollectionIMP.m */; };
 		2358919C22BA87D300E0508A /* YBHCollectionCellConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358918222BA87D200E0508A /* YBHCollectionCellConfig.m */; };
 		2358919D22BA87D300E0508A /* YBHCollectionHeaderFooterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2358918522BA87D200E0508A /* YBHCollectionHeaderFooterConfig.m */; };
@@ -51,6 +38,20 @@
 		235A7CAC22B8E84700159B0F /* TestTableNibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 235A7CAA22B8E84700159B0F /* TestTableNibCell.xib */; };
 		235A7CAF22B8EB2E00159B0F /* TestTableNibHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7CAE22B8EB2E00159B0F /* TestTableNibHeader.m */; };
 		235A7CB122B8EB3700159B0F /* TestTableNibHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 235A7CB022B8EB3700159B0F /* TestTableNibHeader.xib */; };
+		23A8D5D0230970DB00D97507 /* WellKnownSayingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5B8230970DB00D97507 /* WellKnownSayingController.m */; };
+		23A8D5D1230970DB00D97507 /* WellKnownSayingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5BB230970DB00D97507 /* WellKnownSayingModel.m */; };
+		23A8D5D2230970DB00D97507 /* WellKnownSayingOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5BE230970DB00D97507 /* WellKnownSayingOneCell.m */; };
+		23A8D5D3230970DB00D97507 /* WellKnownSayingOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A8D5BF230970DB00D97507 /* WellKnownSayingOneCell.xib */; };
+		23A8D5D4230970DB00D97507 /* WellKnownSayingThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5C1230970DB00D97507 /* WellKnownSayingThreeCell.m */; };
+		23A8D5D5230970DB00D97507 /* WellKnownSayingThreeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A8D5C2230970DB00D97507 /* WellKnownSayingThreeCell.xib */; };
+		23A8D5D6230970DB00D97507 /* WellKnownSayingTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5C4230970DB00D97507 /* WellKnownSayingTwoCell.m */; };
+		23A8D5D7230970DB00D97507 /* WellKnownSayingTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A8D5C5230970DB00D97507 /* WellKnownSayingTwoCell.xib */; };
+		23A8D5D8230970DB00D97507 /* WellKnownSayingControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5C8230970DB00D97507 /* WellKnownSayingControllerViewModel.m */; };
+		23A8D5D9230970DB00D97507 /* WellKnownSayingOneCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5CA230970DB00D97507 /* WellKnownSayingOneCellModel.m */; };
+		23A8D5DA230970DB00D97507 /* WellKnownSayingThreeCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5CC230970DB00D97507 /* WellKnownSayingThreeCellModel.m */; };
+		23A8D5DB230970DB00D97507 /* WellKnownSayingTwoCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5CE230970DB00D97507 /* WellKnownSayingTwoCellModel.m */; };
+		23A8D5DC230970DB00D97507 /* WellKnownSaying.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23A8D5CF230970DB00D97507 /* WellKnownSaying.plist */; };
+		23A8D5DF2309925500D97507 /* WellKnownSayingTableIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5DE2309925500D97507 /* WellKnownSayingTableIMP.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,28 +79,6 @@
 		2358914322B9CBF500E0508A /* TestCollectionNibCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionNibCell.xib; sourceTree = "<group>"; };
 		2358914722BA0C1A00E0508A /* TestTableNibCellConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableNibCellConfig.h; sourceTree = "<group>"; };
 		2358914822BA0C1A00E0508A /* TestTableNibCellConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableNibCellConfig.m; sourceTree = "<group>"; };
-		2358914F22BA145200E0508A /* TestMVVMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMController.h; sourceTree = "<group>"; };
-		2358915022BA145200E0508A /* TestMVVMController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMController.m; sourceTree = "<group>"; };
-		2358915722BA1C8300E0508A /* TestMVVMOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMOneCell.h; sourceTree = "<group>"; };
-		2358915822BA1C8300E0508A /* TestMVVMOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMOneCell.m; sourceTree = "<group>"; };
-		2358915922BA1C8300E0508A /* TestMVVMOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestMVVMOneCell.xib; sourceTree = "<group>"; };
-		2358915C22BA1C9000E0508A /* TestMVVMTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMTwoCell.h; sourceTree = "<group>"; };
-		2358915D22BA1C9000E0508A /* TestMVVMTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMTwoCell.m; sourceTree = "<group>"; };
-		2358915E22BA1C9000E0508A /* TestMVVMTwoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestMVVMTwoCell.xib; sourceTree = "<group>"; };
-		2358916122BA1CB100E0508A /* TestMVVMThreeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMThreeCell.h; sourceTree = "<group>"; };
-		2358916222BA1CB100E0508A /* TestMVVMThreeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMThreeCell.m; sourceTree = "<group>"; };
-		2358916322BA1CB100E0508A /* TestMVVMThreeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestMVVMThreeCell.xib; sourceTree = "<group>"; };
-		2358916922BA1D8700E0508A /* TestMVVMOneCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMOneCellViewModel.h; sourceTree = "<group>"; };
-		2358916A22BA1D8700E0508A /* TestMVVMOneCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMOneCellViewModel.m; sourceTree = "<group>"; };
-		2358916C22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMTwoCellViewModel.h; sourceTree = "<group>"; };
-		2358916D22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMTwoCellViewModel.m; sourceTree = "<group>"; };
-		2358916F22BA1DBF00E0508A /* TestMVVMThreeCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMThreeCellViewModel.h; sourceTree = "<group>"; };
-		2358917022BA1DBF00E0508A /* TestMVVMThreeCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMThreeCellViewModel.m; sourceTree = "<group>"; };
-		2358917222BA1E9D00E0508A /* TestMVVMControllerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMControllerViewModel.h; sourceTree = "<group>"; };
-		2358917322BA1E9D00E0508A /* TestMVVMControllerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMControllerViewModel.m; sourceTree = "<group>"; };
-		2358917622BA2DBD00E0508A /* TestMVVMModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMVVMModel.h; sourceTree = "<group>"; };
-		2358917722BA2DBD00E0508A /* TestMVVMModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMVVMModel.m; sourceTree = "<group>"; };
-		2358917922BA304800E0508A /* TestMVVM.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TestMVVM.plist; sourceTree = "<group>"; };
 		2358917E22BA87D200E0508A /* YBHandyCollectionIMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBHandyCollectionIMP.h; sourceTree = "<group>"; };
 		2358917F22BA87D200E0508A /* YBHandyCollectionIMP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBHandyCollectionIMP.m; sourceTree = "<group>"; };
 		2358918122BA87D200E0508A /* YBHCollectionCellConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBHCollectionCellConfig.h; sourceTree = "<group>"; };
@@ -157,6 +136,30 @@
 		235A7CAD22B8EB2E00159B0F /* TestTableNibHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableNibHeader.h; sourceTree = "<group>"; };
 		235A7CAE22B8EB2E00159B0F /* TestTableNibHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableNibHeader.m; sourceTree = "<group>"; };
 		235A7CB022B8EB3700159B0F /* TestTableNibHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableNibHeader.xib; sourceTree = "<group>"; };
+		23A8D5B7230970DB00D97507 /* WellKnownSayingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingController.h; sourceTree = "<group>"; };
+		23A8D5B8230970DB00D97507 /* WellKnownSayingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingController.m; sourceTree = "<group>"; };
+		23A8D5BA230970DB00D97507 /* WellKnownSayingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingModel.h; sourceTree = "<group>"; };
+		23A8D5BB230970DB00D97507 /* WellKnownSayingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingModel.m; sourceTree = "<group>"; };
+		23A8D5BD230970DB00D97507 /* WellKnownSayingOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingOneCell.h; sourceTree = "<group>"; };
+		23A8D5BE230970DB00D97507 /* WellKnownSayingOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingOneCell.m; sourceTree = "<group>"; };
+		23A8D5BF230970DB00D97507 /* WellKnownSayingOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WellKnownSayingOneCell.xib; sourceTree = "<group>"; };
+		23A8D5C0230970DB00D97507 /* WellKnownSayingThreeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingThreeCell.h; sourceTree = "<group>"; };
+		23A8D5C1230970DB00D97507 /* WellKnownSayingThreeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingThreeCell.m; sourceTree = "<group>"; };
+		23A8D5C2230970DB00D97507 /* WellKnownSayingThreeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WellKnownSayingThreeCell.xib; sourceTree = "<group>"; };
+		23A8D5C3230970DB00D97507 /* WellKnownSayingTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingTwoCell.h; sourceTree = "<group>"; };
+		23A8D5C4230970DB00D97507 /* WellKnownSayingTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingTwoCell.m; sourceTree = "<group>"; };
+		23A8D5C5230970DB00D97507 /* WellKnownSayingTwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WellKnownSayingTwoCell.xib; sourceTree = "<group>"; };
+		23A8D5C7230970DB00D97507 /* WellKnownSayingControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingControllerViewModel.h; sourceTree = "<group>"; };
+		23A8D5C8230970DB00D97507 /* WellKnownSayingControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingControllerViewModel.m; sourceTree = "<group>"; };
+		23A8D5C9230970DB00D97507 /* WellKnownSayingOneCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingOneCellModel.h; sourceTree = "<group>"; };
+		23A8D5CA230970DB00D97507 /* WellKnownSayingOneCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingOneCellModel.m; sourceTree = "<group>"; };
+		23A8D5CB230970DB00D97507 /* WellKnownSayingThreeCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingThreeCellModel.h; sourceTree = "<group>"; };
+		23A8D5CC230970DB00D97507 /* WellKnownSayingThreeCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingThreeCellModel.m; sourceTree = "<group>"; };
+		23A8D5CD230970DB00D97507 /* WellKnownSayingTwoCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingTwoCellModel.h; sourceTree = "<group>"; };
+		23A8D5CE230970DB00D97507 /* WellKnownSayingTwoCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingTwoCellModel.m; sourceTree = "<group>"; };
+		23A8D5CF230970DB00D97507 /* WellKnownSaying.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WellKnownSaying.plist; sourceTree = "<group>"; };
+		23A8D5DD2309925500D97507 /* WellKnownSayingTableIMP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingTableIMP.h; sourceTree = "<group>"; };
+		23A8D5DE2309925500D97507 /* WellKnownSayingTableIMP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingTableIMP.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,72 +187,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2358914A22BA13E900E0508A /* MVVM架构支撑 */ = {
-			isa = PBXGroup;
-			children = (
-				2358917922BA304800E0508A /* TestMVVM.plist */,
-				2358914E22BA143600E0508A /* Model */,
-				2358914D22BA143200E0508A /* ViewModel */,
-				2358914C22BA142E00E0508A /* View */,
-				2358914B22BA142A00E0508A /* Controller */,
-			);
-			path = "MVVM架构支撑";
-			sourceTree = "<group>";
-		};
-		2358914B22BA142A00E0508A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				2358914F22BA145200E0508A /* TestMVVMController.h */,
-				2358915022BA145200E0508A /* TestMVVMController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		2358914C22BA142E00E0508A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2358915722BA1C8300E0508A /* TestMVVMOneCell.h */,
-				2358915822BA1C8300E0508A /* TestMVVMOneCell.m */,
-				2358915922BA1C8300E0508A /* TestMVVMOneCell.xib */,
-				2358915C22BA1C9000E0508A /* TestMVVMTwoCell.h */,
-				2358915D22BA1C9000E0508A /* TestMVVMTwoCell.m */,
-				2358915E22BA1C9000E0508A /* TestMVVMTwoCell.xib */,
-				2358916122BA1CB100E0508A /* TestMVVMThreeCell.h */,
-				2358916222BA1CB100E0508A /* TestMVVMThreeCell.m */,
-				2358916322BA1CB100E0508A /* TestMVVMThreeCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2358914D22BA143200E0508A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				2358917222BA1E9D00E0508A /* TestMVVMControllerViewModel.h */,
-				2358917322BA1E9D00E0508A /* TestMVVMControllerViewModel.m */,
-				2358916922BA1D8700E0508A /* TestMVVMOneCellViewModel.h */,
-				2358916A22BA1D8700E0508A /* TestMVVMOneCellViewModel.m */,
-				2358916C22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.h */,
-				2358916D22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.m */,
-				2358916F22BA1DBF00E0508A /* TestMVVMThreeCellViewModel.h */,
-				2358917022BA1DBF00E0508A /* TestMVVMThreeCellViewModel.m */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		2358914E22BA143600E0508A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2358917622BA2DBD00E0508A /* TestMVVMModel.h */,
-				2358917722BA2DBD00E0508A /* TestMVVMModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		2358917B22BA87D200E0508A /* YBHandyList */ = {
 			isa = PBXGroup;
 			children = (
-				2358917C22BA87D200E0508A /* YBHandyCollection */,
 				2358918B22BA87D200E0508A /* YBHandyList.h */,
+				2358917C22BA87D200E0508A /* YBHandyCollection */,
 				2358918C22BA87D200E0508A /* YBHandyTable */,
 			);
 			path = YBHandyList;
@@ -349,9 +291,9 @@
 			isa = PBXGroup;
 			children = (
 				2358917B22BA87D200E0508A /* YBHandyList */,
-				235A7C8022B8BA0C00159B0F /* TableView用例 */,
-				235A7C8122B8BA1700159B0F /* CollectionView用例 */,
-				2358914A22BA13E900E0508A /* MVVM架构支撑 */,
+				235A7C8022B8BA0C00159B0F /* TableView 简单用例 */,
+				235A7C8122B8BA1700159B0F /* CollectionView 简单用例 */,
+				23A8D5B5230970DB00D97507 /* MVVM 架构实施 */,
 				235A7C0522B8732900159B0F /* AppDelegate.h */,
 				235A7C0622B8732900159B0F /* AppDelegate.m */,
 				235A7C9922B8C42400159B0F /* YBHLPrefixHeader.pch */,
@@ -385,24 +327,24 @@
 			path = YBHandyListDemoUITests;
 			sourceTree = "<group>";
 		};
-		235A7C8022B8BA0C00159B0F /* TableView用例 */ = {
+		235A7C8022B8BA0C00159B0F /* TableView 简单用例 */ = {
 			isa = PBXGroup;
 			children = (
 				235A7C8522B8BC0B00159B0F /* Model */,
 				235A7C8822B8BC0B00159B0F /* View */,
 				235A7C8B22B8BC0B00159B0F /* Controller */,
 			);
-			path = "TableView用例";
+			path = "TableView 简单用例";
 			sourceTree = "<group>";
 		};
-		235A7C8122B8BA1700159B0F /* CollectionView用例 */ = {
+		235A7C8122B8BA1700159B0F /* CollectionView 简单用例 */ = {
 			isa = PBXGroup;
 			children = (
 				235A7C9822B8BEBC00159B0F /* Model */,
 				235A7C9722B8BEBA00159B0F /* View */,
 				235A7C9122B8BC7B00159B0F /* Controller */,
 			);
-			path = "CollectionView用例";
+			path = "CollectionView 简单用例";
 			sourceTree = "<group>";
 		};
 		235A7C8522B8BC0B00159B0F /* Model */ = {
@@ -466,6 +408,77 @@
 				2358913F22B9C18E00E0508A /* TestCollectionModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		23A8D5B5230970DB00D97507 /* MVVM 架构实施 */ = {
+			isa = PBXGroup;
+			children = (
+				23A8D5B9230970DB00D97507 /* Model */,
+				23A8D5C6230970DB00D97507 /* ViewModel */,
+				23A8D5BC230970DB00D97507 /* View */,
+				23A8D5E02309926600D97507 /* TableIMP */,
+				23A8D5B6230970DB00D97507 /* Controller */,
+				23A8D5CF230970DB00D97507 /* WellKnownSaying.plist */,
+			);
+			path = "MVVM 架构实施";
+			sourceTree = "<group>";
+		};
+		23A8D5B6230970DB00D97507 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23A8D5B7230970DB00D97507 /* WellKnownSayingController.h */,
+				23A8D5B8230970DB00D97507 /* WellKnownSayingController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		23A8D5B9230970DB00D97507 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23A8D5BA230970DB00D97507 /* WellKnownSayingModel.h */,
+				23A8D5BB230970DB00D97507 /* WellKnownSayingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23A8D5BC230970DB00D97507 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23A8D5BD230970DB00D97507 /* WellKnownSayingOneCell.h */,
+				23A8D5BE230970DB00D97507 /* WellKnownSayingOneCell.m */,
+				23A8D5BF230970DB00D97507 /* WellKnownSayingOneCell.xib */,
+				23A8D5C3230970DB00D97507 /* WellKnownSayingTwoCell.h */,
+				23A8D5C4230970DB00D97507 /* WellKnownSayingTwoCell.m */,
+				23A8D5C5230970DB00D97507 /* WellKnownSayingTwoCell.xib */,
+				23A8D5C0230970DB00D97507 /* WellKnownSayingThreeCell.h */,
+				23A8D5C1230970DB00D97507 /* WellKnownSayingThreeCell.m */,
+				23A8D5C2230970DB00D97507 /* WellKnownSayingThreeCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23A8D5C6230970DB00D97507 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				23A8D5C7230970DB00D97507 /* WellKnownSayingControllerViewModel.h */,
+				23A8D5C8230970DB00D97507 /* WellKnownSayingControllerViewModel.m */,
+				23A8D5C9230970DB00D97507 /* WellKnownSayingOneCellModel.h */,
+				23A8D5CA230970DB00D97507 /* WellKnownSayingOneCellModel.m */,
+				23A8D5CD230970DB00D97507 /* WellKnownSayingTwoCellModel.h */,
+				23A8D5CE230970DB00D97507 /* WellKnownSayingTwoCellModel.m */,
+				23A8D5CB230970DB00D97507 /* WellKnownSayingThreeCellModel.h */,
+				23A8D5CC230970DB00D97507 /* WellKnownSayingThreeCellModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		23A8D5E02309926600D97507 /* TableIMP */ = {
+			isa = PBXGroup;
+			children = (
+				23A8D5DD2309925500D97507 /* WellKnownSayingTableIMP.h */,
+				23A8D5DE2309925500D97507 /* WellKnownSayingTableIMP.m */,
+			);
+			path = TableIMP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,16 +584,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2358917A22BA304800E0508A /* TestMVVM.plist in Resources */,
-				2358916522BA1CB100E0508A /* TestMVVMThreeCell.xib in Resources */,
-				2358916022BA1C9000E0508A /* TestMVVMTwoCell.xib in Resources */,
 				235A7C1222B8732A00159B0F /* LaunchScreen.storyboard in Resources */,
+				23A8D5D3230970DB00D97507 /* WellKnownSayingOneCell.xib in Resources */,
 				235A7CB122B8EB3700159B0F /* TestTableNibHeader.xib in Resources */,
 				235A7C0F22B8732A00159B0F /* Assets.xcassets in Resources */,
+				23A8D5D5230970DB00D97507 /* WellKnownSayingThreeCell.xib in Resources */,
+				23A8D5D7230970DB00D97507 /* WellKnownSayingTwoCell.xib in Resources */,
 				2358914522B9CBF500E0508A /* TestCollectionNibCell.xib in Resources */,
-				2358915B22BA1C8300E0508A /* TestMVVMOneCell.xib in Resources */,
 				235A7C0D22B8732900159B0F /* Main.storyboard in Resources */,
 				235A7C9622B8BD3E00159B0F /* MainViewController.xib in Resources */,
+				23A8D5DC230970DB00D97507 /* WellKnownSaying.plist in Resources */,
 				235A7CAC22B8E84700159B0F /* TestTableNibCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,35 +620,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				2358914022B9C18E00E0508A /* TestCollectionModel.m in Sources */,
+				23A8D5DA230970DB00D97507 /* WellKnownSayingThreeCellModel.m in Sources */,
+				23A8D5D6230970DB00D97507 /* WellKnownSayingTwoCell.m in Sources */,
 				2358919F22BA87D300E0508A /* YBHCollectionSection.m in Sources */,
 				2358919C22BA87D300E0508A /* YBHCollectionCellConfig.m in Sources */,
-				2358915F22BA1C9000E0508A /* TestMVVMTwoCell.m in Sources */,
 				235A7C9022B8BC0B00159B0F /* TestTableController.m in Sources */,
+				23A8D5D0230970DB00D97507 /* WellKnownSayingController.m in Sources */,
 				235891A322BA87D300E0508A /* UITableView+YBHandyList.m in Sources */,
-				2358917822BA2DBD00E0508A /* TestMVVMModel.m in Sources */,
 				235A7C8422B8BBF300159B0F /* TestCollectionController.m in Sources */,
+				23A8D5D4230970DB00D97507 /* WellKnownSayingThreeCell.m in Sources */,
 				235891A422BA87D300E0508A /* YBHTableSection.m in Sources */,
-				2358916B22BA1D8700E0508A /* TestMVVMOneCellViewModel.m in Sources */,
 				235A7C8E22B8BC0B00159B0F /* TestTableModel.m in Sources */,
-				2358915122BA145200E0508A /* TestMVVMController.m in Sources */,
 				2358919B22BA87D300E0508A /* YBHandyCollectionIMP.m in Sources */,
-				2358916E22BA1D9B00E0508A /* TestMVVMTwoCellViewModel.m in Sources */,
 				235891A022BA87D300E0508A /* YBHandyTableIMP.m in Sources */,
+				23A8D5DF2309925500D97507 /* WellKnownSayingTableIMP.m in Sources */,
 				2358919E22BA87D300E0508A /* UICollectionView+YBHandyList.m in Sources */,
 				2358914422B9CBF500E0508A /* TestCollectionNibCell.m in Sources */,
-				2358916422BA1CB100E0508A /* TestMVVMThreeCell.m in Sources */,
+				23A8D5D8230970DB00D97507 /* WellKnownSayingControllerViewModel.m in Sources */,
 				2358914922BA0C1A00E0508A /* TestTableNibCellConfig.m in Sources */,
-				2358917122BA1DBF00E0508A /* TestMVVMThreeCellViewModel.m in Sources */,
+				23A8D5D9230970DB00D97507 /* WellKnownSayingOneCellModel.m in Sources */,
 				235A7CAB22B8E84700159B0F /* TestTableNibCell.m in Sources */,
 				235A7CAF22B8EB2E00159B0F /* TestTableNibHeader.m in Sources */,
 				235891A122BA87D300E0508A /* YBHTableCellConfig.m in Sources */,
 				235A7C8F22B8BC0B00159B0F /* TestTableCell.m in Sources */,
-				2358917422BA1E9D00E0508A /* TestMVVMControllerViewModel.m in Sources */,
 				2358919D22BA87D300E0508A /* YBHCollectionHeaderFooterConfig.m in Sources */,
 				235A7C1522B8732A00159B0F /* main.m in Sources */,
-				2358915A22BA1C8300E0508A /* TestMVVMOneCell.m in Sources */,
+				23A8D5D2230970DB00D97507 /* WellKnownSayingOneCell.m in Sources */,
 				235891A222BA87D300E0508A /* YBHTableHeaderFooterConfig.m in Sources */,
+				23A8D5DB230970DB00D97507 /* WellKnownSayingTwoCellModel.m in Sources */,
 				235A7C9522B8BD3E00159B0F /* MainViewController.m in Sources */,
+				23A8D5D1230970DB00D97507 /* WellKnownSayingModel.m in Sources */,
 				235A7C0722B8732900159B0F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

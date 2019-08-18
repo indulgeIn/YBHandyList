@@ -2,8 +2,8 @@
 //  YBHandyCollectionIMP.h
 //  YBHandyList
 //
-//  Created by 杨波 on 2019/6/18.
-//  Copyright © 2019 杨波. All rights reserved.
+//  Created by 波儿菜 on 2019/6/18.
+//  Copyright © 2019 波儿菜. All rights reserved.
 //
 
 #import "YBHCollectionSection.h"
@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol YBHandyCollectionIMPDelegate <NSObject>
 @optional
+
 /**
  点击了某个 cell
  */

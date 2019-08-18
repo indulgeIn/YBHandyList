@@ -20,17 +20,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVO-aP-IU0">
-                    <rect key="frame" x="87.5" y="200" width="239" height="48"/>
+                    <rect key="frame" x="57" y="200" width="300" height="48"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <state key="normal" title="UITableView 用例"/>
+                    <state key="normal" title="UITableView 简单用例"/>
                     <connections>
                         <action selector="clickButton:" destination="-1" eventType="touchUpInside" id="oe8-95-4am"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCl-tz-Lsu">
-                    <rect key="frame" x="53.5" y="273" width="307" height="48"/>
+                    <rect key="frame" x="23.5" y="273" width="367" height="48"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <state key="normal" title="UICollectionView 用例"/>
+                    <state key="normal" title="UICollectionView 简单用例"/>
                     <connections>
                         <action selector="clickCollection:" destination="-1" eventType="touchUpInside" id="cgm-tx-Tkp"/>
                     </connections>
@@ -38,7 +38,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sat-4H-wkh">
                     <rect key="frame" x="96" y="346" width="222" height="48"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <state key="normal" title="MVVM 架构支撑"/>
+                    <state key="normal" title="MVVM 架构实施"/>
                     <connections>
                         <action selector="clickMVVM:" destination="-1" eventType="touchUpInside" id="Bou-mf-dYx"/>
                     </connections>

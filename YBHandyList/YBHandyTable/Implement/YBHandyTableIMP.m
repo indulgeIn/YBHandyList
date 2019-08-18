@@ -2,8 +2,8 @@
 //  YBHandyTableIMP.m
 //  YBHandyList
 //
-//  Created by 杨波 on 2019/6/18.
-//  Copyright © 2019 杨波. All rights reserved.
+//  Created by 波儿菜 on 2019/6/18.
+//  Copyright © 2019 波儿菜. All rights reserved.
 //
 
 #import "YBHandyTableIMP.h"
@@ -35,8 +35,8 @@
     if ([config.ybht_cellClass respondsToSelector:@selector(ybht_heightForCellWithConfig:reuseIdentifier:indexPath:)]) {
         return [config.ybht_cellClass ybht_heightForCellWithConfig:config reuseIdentifier:[self reuseIdentifierForCellConfig:config] indexPath:indexPath];
     }
-    if ([config respondsToSelector:@selector(ybht_defaultHeight)] && config.ybht_defaultHeight) {
-        return config.ybht_defaultHeight.doubleValue;
+    if ([config respondsToSelector:@selector(ybht_defaultHeight)] && config.ybht_defaultHeight >= 0) {
+        return config.ybht_defaultHeight;
     }
     return UITableViewAutomaticDimension;
 }
@@ -144,8 +144,8 @@
     if (config && [config.ybht_headerFooterClass respondsToSelector:@selector(ybht_heightForHeaderFooterWithConfig:reuseIdentifier:section:)]) {
         return [config.ybht_headerFooterClass ybht_heightForHeaderFooterWithConfig:config reuseIdentifier:[self reuseIdentifierForHeaderFooterConfig:config] section:section];
     }
-    if ([config respondsToSelector:@selector(ybht_defaultHeight)] && config.ybht_defaultHeight) {
-        return config.ybht_defaultHeight.doubleValue;
+    if ([config respondsToSelector:@selector(ybht_defaultHeight)] && config.ybht_defaultHeight >= 0) {
+        return config.ybht_defaultHeight;
     }
     return tableView.style == UITableViewStylePlain ? 0 : CGFLOAT_MIN;
 }

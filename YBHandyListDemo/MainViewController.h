@@ -2,8 +2,8 @@
 //  MainViewController.h
 //  YBHandyTableViewDemo
 //
-//  Created by 杨波 on 2019/4/11.
-//  Copyright © 2019 杨波. All rights reserved.
+//  Created by 波儿菜 on 2019/4/11.
+//  Copyright © 2019 波儿菜. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

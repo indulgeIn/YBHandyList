@@ -2,8 +2,8 @@
 //  YBHTableHeaderFooterConfig.h
 //  YBHandyListDemo
 //
-//  Created by 杨波 on 2019/6/18.
-//  Copyright © 2019 杨波. All rights reserved.
+//  Created by 波儿菜 on 2019/6/18.
+//  Copyright © 2019 波儿菜. All rights reserved.
 //
 
 #import "YBHTableHeaderFooterProtocol.h"
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (id)ybht_model;
 
 /** header/footer 的默认高度 (优先级低于 YBHTableCellProtocol 代理方法返回的高度) */
-- (NSNumber *)ybht_defaultHeight;
+- (CGFloat)ybht_defaultHeight;
 
 /** header/footer 的复用标识 */
 - (NSString *)ybht_headerFooterReuseIdentifier;
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 配置默认实现类，一般业务就够用了
+ 配置默认实现类，用于快速构建，若想拓展属性请自行创建类实现 YBHTableHeaderFooterConfig 协议
  */
 @interface YBHTableHeaderFooterConfig : NSObject <YBHTableHeaderFooterConfig>
 
@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) id model;
 
 /** header/footer 的默认高度 (优先级低于 YBHTableCellProtocol 代理方法返回的高度) */
-@property (nonatomic, copy) NSNumber *defaultHeight;
+@property (nonatomic, assign) CGFloat defaultHeight;
 
 /** header/footer 的复用标识 */
 @property (nonatomic, copy) NSString *headerFooterReuseIdentifier;

@@ -2,13 +2,23 @@
 //  YBHTableHeaderFooterConfig.m
 //  YBHandyListDemo
 //
-//  Created by 杨波 on 2019/6/18.
-//  Copyright © 2019 杨波. All rights reserved.
+//  Created by 波儿菜 on 2019/6/18.
+//  Copyright © 2019 波儿菜. All rights reserved.
 //
 
 #import "YBHTableHeaderFooterConfig.h"
 
 @implementation YBHTableHeaderFooterConfig
+
+#pragma mark - life cycle
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _defaultHeight = -1;
+    }
+    return self;
+}
 
 #pragma mark - <YBHTableHeaderFooterConfig>
 
@@ -20,7 +30,7 @@
     return self.model;
 }
 
-- (NSNumber *)ybht_defaultHeight {
+- (CGFloat)ybht_defaultHeight {
     return self.defaultHeight;
 }
 

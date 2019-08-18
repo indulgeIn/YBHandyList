@@ -2,8 +2,8 @@
 //  YBHCollectionHeaderFooterConfig.h
 //  YBHandyListDemo
 //
-//  Created by 杨波 on 2019/6/18.
-//  Copyright © 2019 杨波. All rights reserved.
+//  Created by 波儿菜 on 2019/6/18.
+//  Copyright © 2019 波儿菜. All rights reserved.
 //
 
 #import "YBHCollectionHeaderFooterProtocol.h"
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 配置默认实现类，一般业务就够用了
+ 配置默认实现类，用于快速构建，若想拓展属性请自行创建类实现 YBHCollectionHeaderFooterConfig 协议
  */
 @interface YBHCollectionHeaderFooterConfig : NSObject <YBHCollectionHeaderFooterConfig>
 

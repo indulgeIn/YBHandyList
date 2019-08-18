@@ -2,8 +2,8 @@
 //  UICollectionView+YBHandyList.h
 //  YBHandyListDemo
 //
-//  Created by 杨波 on 2019/6/18.
-//  Copyright © 2019 杨波. All rights reserved.
+//  Created by 波儿菜 on 2019/6/18.
+//  Copyright © 2019 波儿菜. All rights reserved.
 //
 
 #import "YBHandyCollectionIMP.h"
@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) id<YBHCollectionHeaderFooterConfig> ybhc_header;
 /** 一个 section，footer 配置 */
 @property (nonatomic, strong, nullable) id<YBHCollectionHeaderFooterConfig> ybhc_footer;
-
 /** 一个 section，cell 间距 */
 @property (nonatomic, assign) CGFloat ybhc_minimumLineSpacing;
 /** 一个 section，cell 间距 */

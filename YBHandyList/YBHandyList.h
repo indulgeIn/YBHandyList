@@ -2,8 +2,8 @@
 //  YBHandyList.h
 //  YBHandyListDemo
 //
-//  Created by 杨波 on 2019/6/19.
-//  Copyright © 2019 杨波. All rights reserved.
+//  Created by 波儿菜 on 2019/6/19.
+//  Copyright © 2019 波儿菜. All rights reserved.
 //
 
 #ifndef YBHandyList_h
@@ -13,3 +13,4 @@
 #import "UICollectionView+YBHandyList.h"
 
 #endif /* YBHandyList_h */
+
