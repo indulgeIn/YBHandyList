@@ -7,6 +7,7 @@
 
 让 UITableView / UICollectionView 更加简单优雅，轻易实现列表动态化、模块化、MVVM 架构。
 
+原理分析文章：[iOS 列表界面如何优雅实现模块化与动态化](https://www.jianshu.com/p/f0a74d5744b8)
 
 ## 特性
 
