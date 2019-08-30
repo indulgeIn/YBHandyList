@@ -76,8 +76,12 @@
     if ([cell conformsToProtocol:@protocol(YBHCollectionCellProtocol)]) {
         UICollectionViewCell<YBHCollectionCellProtocol> *tmpCell = (UICollectionViewCell<YBHCollectionCellProtocol> *)cell;
 
-        [tmpCell ybhc_setCellConfig:config];
-
+        if ([tmpCell respondsToSelector:@selector(ybhc_setHeaderFooterConfig:indexPath:commonInfo:)]) {
+            [tmpCell ybhc_setCellConfig:config indexPath:indexPath commonInfo:self.commonInfo];
+        }
+        if ([tmpCell respondsToSelector:@selector(ybhc_setCellConfig:)]) {
+            [tmpCell ybhc_setCellConfig:config];
+        }
         if ([tmpCell respondsToSelector:@selector(setYbhc_reloadCollectionView:)]) {
             __weak typeof(collectionView) wCollectionView = collectionView;
             [tmpCell setYbhc_reloadCollectionView:^{
@@ -124,8 +128,12 @@
     if ([view conformsToProtocol:@protocol(YBHCollectionHeaderFooterProtocol)]) {
         UICollectionReusableView<YBHCollectionHeaderFooterProtocol> *tmpView = (UICollectionReusableView<YBHCollectionHeaderFooterProtocol> *)view;
         
-        [tmpView ybhc_setHeaderFooterConfig:config];
-        
+        if ([tmpView respondsToSelector:@selector(ybhc_setHeaderFooterConfig:indexPath:commonInfo:)]) {
+            [tmpView ybhc_setHeaderFooterConfig:config indexPath:indexPath commonInfo:self.commonInfo];
+        }
+        if ([tmpView respondsToSelector:@selector(ybhc_setHeaderFooterConfig:)]) {
+            [tmpView ybhc_setHeaderFooterConfig:config];
+        }
         if ([tmpView respondsToSelector:@selector(setYbhc_reloadCollectionView:)]) {
             __weak typeof(collectionView) wCollectionView = collectionView;
             [tmpView setYbhc_reloadCollectionView:^{
@@ -149,6 +157,9 @@
     YBHCollectionSection *htSection = self.sectionArray[indexPath.section];
     id<YBHCollectionCellConfig> config = htSection.rowArray[indexPath.row];
     
+    if ([config.ybhc_cellClass respondsToSelector:@selector(ybhc_sizeForCellWithConfig:reuseIdentifier:indexPath:sectionPack:commonInfo:)]) {
+        return [config.ybhc_cellClass ybhc_sizeForCellWithConfig:config reuseIdentifier:[self reuseIdentifierForCellConfig:config] indexPath:indexPath sectionPack:htSection commonInfo:self.commonInfo];
+    }
     if ([config.ybhc_cellClass respondsToSelector:@selector(ybhc_sizeForCellWithConfig:reuseIdentifier:indexPath:sectionPack:)]) {
         return [config.ybhc_cellClass ybhc_sizeForCellWithConfig:config reuseIdentifier:[self reuseIdentifierForCellConfig:config] indexPath:indexPath sectionPack:htSection];
     }
@@ -231,6 +242,9 @@
 }
 
 - (CGSize)sizeForHeaderFooterWithConfig:(id<YBHCollectionHeaderFooterConfig>)config section:(NSInteger)section sectionPack:(YBHCollectionSection *)sectionPack {
+    if (config && [config.ybhc_headerFooterClass respondsToSelector:@selector(ybhc_sizeForHeaderFooterWithConfig:reuseIdentifier:section:sectionPack:commonInfo:)]) {
+        return [config.ybhc_headerFooterClass ybhc_sizeForHeaderFooterWithConfig:config reuseIdentifier:[self reuseIdentifierForHeaderFooterConfig:config] section:section sectionPack:sectionPack commonInfo:self.commonInfo];
+    }
     if (config && [config.ybhc_headerFooterClass respondsToSelector:@selector(ybhc_sizeForHeaderFooterWithConfig:reuseIdentifier:section:sectionPack:)]) {
         return [config.ybhc_headerFooterClass ybhc_sizeForHeaderFooterWithConfig:config reuseIdentifier:[self reuseIdentifierForHeaderFooterConfig:config] section:section sectionPack:sectionPack];
     }
@@ -247,6 +261,13 @@
         _sectionArray = [NSMutableArray array];
     }
     return _sectionArray;
+}
+
+- (YBHCCommonInfo *)commonInfo {
+    if (!_commonInfo) {
+        _commonInfo = [YBHCCommonInfo new];
+    }
+    return _commonInfo;
 }
 
 @end

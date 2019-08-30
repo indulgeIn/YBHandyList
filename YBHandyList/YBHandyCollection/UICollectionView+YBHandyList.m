@@ -61,6 +61,13 @@
     return section;
 }
 
+- (void)setYbhc_commonInfo:(YBHCCommonInfo *)ybhc_commonInfo {
+    self.ybhc_collectionIMP.commonInfo = ybhc_commonInfo;
+}
+- (YBHCCommonInfo *)ybhc_commonInfo {
+    return self.ybhc_collectionIMP.commonInfo;
+}
+
 #pragma mark - getters & setters
 
 static const void *YBHCSectionArrayKey = &YBHCSectionArrayKey;

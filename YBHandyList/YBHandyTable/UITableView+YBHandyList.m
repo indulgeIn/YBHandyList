@@ -40,6 +40,13 @@
     return section;
 }
 
+- (void)setYbht_commonInfo:(YBHTCommonInfo *)ybht_commonInfo {
+    self.ybht_tableIMP.commonInfo = ybht_commonInfo;
+}
+- (YBHTCommonInfo *)ybht_commonInfo {
+    return self.ybht_tableIMP.commonInfo;
+}
+
 #pragma mark - getters & setters
 
 static const void *YBHTSectionArrayKey = &YBHTSectionArrayKey;

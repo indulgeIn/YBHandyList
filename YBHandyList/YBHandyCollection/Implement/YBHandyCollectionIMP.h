@@ -7,6 +7,7 @@
 //
 
 #import "YBHCollectionSection.h"
+#import "YBHCCommonInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -41,6 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 数据源 */
 @property (nonatomic, strong) NSMutableArray<YBHCollectionSection *> *sectionArray;
+
+/** 公共信息对象，将会下发到 Cell/Header/Footer */
+@property (nonatomic, strong) YBHCCommonInfo *commonInfo;
 
 @end
 

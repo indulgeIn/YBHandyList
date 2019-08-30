@@ -7,9 +7,13 @@
 //
 
 #import "YBHandyCollectionIMP.h"
+#import "YBHCCommonInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ ybhc_collectionIMP 属性是核心代理实现类，其它属性都是便捷配置 ybhc_collectionIMP 的语法糖
+ */
 @interface UICollectionView (YBHandyList)
 
 /** 一个 section，cell 配置数组 */
@@ -27,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 多个 section */
 @property (nonatomic, strong, readonly) NSMutableArray<YBHCollectionSection *> *ybhc_sectionArray;
+
+/** 公共信息对象，将会下发到 Cell/Header/Footer */
+@property (nonatomic, strong) YBHCCommonInfo *ybhc_commonInfo;
 
 /** 代理实现者，将数组内容转换为列表代理方法的核心类
  （需要实现额外的 UICollectionView 代理方法，可以自定义继承 YBHandyTableIMP 的类并赋值该属性）*/

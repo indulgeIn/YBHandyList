@@ -52,6 +52,8 @@
 		23A8D5DB230970DB00D97507 /* WellKnownSayingTwoCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5CE230970DB00D97507 /* WellKnownSayingTwoCellModel.m */; };
 		23A8D5DC230970DB00D97507 /* WellKnownSaying.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23A8D5CF230970DB00D97507 /* WellKnownSaying.plist */; };
 		23A8D5DF2309925500D97507 /* WellKnownSayingTableIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5DE2309925500D97507 /* WellKnownSayingTableIMP.m */; };
+		23F3F69D23191D2600A7AD2D /* YBHCCommonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3F69C23191D2600A7AD2D /* YBHCCommonInfo.m */; };
+		23F3F6A4231929B500A7AD2D /* YBHTCommonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3F6A3231929B500A7AD2D /* YBHTCommonInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +162,10 @@
 		23A8D5CF230970DB00D97507 /* WellKnownSaying.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WellKnownSaying.plist; sourceTree = "<group>"; };
 		23A8D5DD2309925500D97507 /* WellKnownSayingTableIMP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WellKnownSayingTableIMP.h; sourceTree = "<group>"; };
 		23A8D5DE2309925500D97507 /* WellKnownSayingTableIMP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WellKnownSayingTableIMP.m; sourceTree = "<group>"; };
+		23F3F69B23191D2600A7AD2D /* YBHCCommonInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBHCCommonInfo.h; sourceTree = "<group>"; };
+		23F3F69C23191D2600A7AD2D /* YBHCCommonInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBHCCommonInfo.m; sourceTree = "<group>"; };
+		23F3F6A2231929B500A7AD2D /* YBHTCommonInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBHTCommonInfo.h; sourceTree = "<group>"; };
+		23F3F6A3231929B500A7AD2D /* YBHTCommonInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBHTCommonInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 		2358917C22BA87D200E0508A /* YBHandyCollection */ = {
 			isa = PBXGroup;
 			children = (
+				23F3F69A23191CF400A7AD2D /* Helper */,
 				2358917D22BA87D200E0508A /* Implement */,
 				2358918022BA87D200E0508A /* Protocol */,
 				2358918722BA87D200E0508A /* UICollectionView+YBHandyList.h */,
@@ -235,6 +242,7 @@
 		2358918C22BA87D200E0508A /* YBHandyTable */ = {
 			isa = PBXGroup;
 			children = (
+				23F3F6A12319299C00A7AD2D /* Helper */,
 				2358918D22BA87D200E0508A /* Implement */,
 				2358919022BA87D200E0508A /* Protocol */,
 				2358919722BA87D200E0508A /* UITableView+YBHandyList.h */,
@@ -481,6 +489,24 @@
 			path = TableIMP;
 			sourceTree = "<group>";
 		};
+		23F3F69A23191CF400A7AD2D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				23F3F69B23191D2600A7AD2D /* YBHCCommonInfo.h */,
+				23F3F69C23191D2600A7AD2D /* YBHCCommonInfo.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		23F3F6A12319299C00A7AD2D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				23F3F6A2231929B500A7AD2D /* YBHTCommonInfo.h */,
+				23F3F6A3231929B500A7AD2D /* YBHTCommonInfo.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -631,6 +657,7 @@
 				23A8D5D4230970DB00D97507 /* WellKnownSayingThreeCell.m in Sources */,
 				235891A422BA87D300E0508A /* YBHTableSection.m in Sources */,
 				235A7C8E22B8BC0B00159B0F /* TestTableModel.m in Sources */,
+				23F3F69D23191D2600A7AD2D /* YBHCCommonInfo.m in Sources */,
 				2358919B22BA87D300E0508A /* YBHandyCollectionIMP.m in Sources */,
 				235891A022BA87D300E0508A /* YBHandyTableIMP.m in Sources */,
 				23A8D5DF2309925500D97507 /* WellKnownSayingTableIMP.m in Sources */,
@@ -651,6 +678,7 @@
 				235A7C9522B8BD3E00159B0F /* MainViewController.m in Sources */,
 				23A8D5D1230970DB00D97507 /* WellKnownSayingModel.m in Sources */,
 				235A7C0722B8732900159B0F /* AppDelegate.m in Sources */,
+				23F3F6A4231929B500A7AD2D /* YBHTCommonInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

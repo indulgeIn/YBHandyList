@@ -32,6 +32,9 @@
     YBHTableSection *htSection = self.sectionArray[indexPath.section];
     id<YBHTableCellConfig> config = htSection.rowArray[indexPath.row];
     
+    if ([config.ybht_cellClass respondsToSelector:@selector(ybht_heightForCellWithConfig:reuseIdentifier:indexPath:commonInfo:)]) {
+        return [config.ybht_cellClass ybht_heightForCellWithConfig:config reuseIdentifier:[self reuseIdentifierForCellConfig:config] indexPath:indexPath commonInfo:self.commonInfo];
+    }
     if ([config.ybht_cellClass respondsToSelector:@selector(ybht_heightForCellWithConfig:reuseIdentifier:indexPath:)]) {
         return [config.ybht_cellClass ybht_heightForCellWithConfig:config reuseIdentifier:[self reuseIdentifierForCellConfig:config] indexPath:indexPath];
     }
@@ -99,8 +102,12 @@
     if ([cell conformsToProtocol:@protocol(YBHTableCellProtocol)]) {
         UITableViewCell<YBHTableCellProtocol> *tmpCell = (UITableViewCell<YBHTableCellProtocol> *)cell;
         
-        [tmpCell ybht_setCellConfig:config];
-        
+        if ([tmpCell respondsToSelector:@selector(ybht_setCellConfig:indexPath:commonInfo:)]) {
+            [tmpCell ybht_setCellConfig:config indexPath:indexPath commonInfo:self.commonInfo];
+        }
+        if ([tmpCell respondsToSelector:@selector(ybht_setCellConfig:)]) {
+            [tmpCell ybht_setCellConfig:config];
+        }
         if ([tmpCell respondsToSelector:@selector(setYbht_reloadTableView:)]) {
             __weak typeof(tableView) wTableView = tableView;
             [tmpCell setYbht_reloadTableView:^{
@@ -141,6 +148,9 @@
 }
 
 - (CGFloat)heightForHeaderFooterWithTableView:(UITableView *)tableView config:(id<YBHTableHeaderFooterConfig>)config section:(NSInteger)section {
+    if (config && [config.ybht_headerFooterClass respondsToSelector:@selector(ybht_heightForHeaderFooterWithConfig:reuseIdentifier:section:commonInfo:)]) {
+        return [config.ybht_headerFooterClass ybht_heightForHeaderFooterWithConfig:config reuseIdentifier:[self reuseIdentifierForHeaderFooterConfig:config] section:section commonInfo:self.commonInfo];
+    }
     if (config && [config.ybht_headerFooterClass respondsToSelector:@selector(ybht_heightForHeaderFooterWithConfig:reuseIdentifier:section:)]) {
         return [config.ybht_headerFooterClass ybht_heightForHeaderFooterWithConfig:config reuseIdentifier:[self reuseIdentifierForHeaderFooterConfig:config] section:section];
     }
@@ -175,8 +185,12 @@
     if ([view conformsToProtocol:@protocol(YBHTableHeaderFooterProtocol)]) {
         UIView<YBHTableHeaderFooterProtocol> *tmpView = (UIView<YBHTableHeaderFooterProtocol> *)view;
         
-        [tmpView ybht_setHeaderFooterConfig:config];
-        
+        if ([tmpView respondsToSelector:@selector(ybht_setHeaderFooterConfig:section:commonInfo:)]) {
+            [tmpView ybht_setHeaderFooterConfig:config section:section commonInfo:self.commonInfo];
+        }
+        if ([tmpView respondsToSelector:@selector(ybht_setHeaderFooterConfig:)]) {
+            [tmpView ybht_setHeaderFooterConfig:config];
+        }
         if ([tmpView respondsToSelector:@selector(setYbht_reloadTableView:)]) {
             __weak typeof(tableView) wTableView = tableView;
             [tmpView setYbht_reloadTableView:^{
@@ -198,6 +212,13 @@
         _sectionArray = [NSMutableArray array];
     }
     return _sectionArray;
+}
+
+- (YBHTCommonInfo *)commonInfo {
+    if (!_commonInfo) {
+        _commonInfo = [YBHTCommonInfo new];
+    }
+    return _commonInfo;
 }
 
 @end

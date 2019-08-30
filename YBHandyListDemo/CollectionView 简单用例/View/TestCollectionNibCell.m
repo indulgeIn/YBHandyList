@@ -29,9 +29,9 @@
     self.textLabel.text = model.text;
 }
 
-+ (CGSize)ybhc_sizeForCellWithConfig:(id<YBHCollectionCellConfig>)config reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath sectionPack:(nonnull YBHCollectionSection *)sectionPack {
++ (CGSize)ybhc_sizeForCellWithConfig:(id<YBHCollectionCellConfig>)config reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath sectionPack:(nonnull YBHCollectionSection *)sectionPack commonInfo:(nonnull YBHCCommonInfo *)commonInfo {
     // 一排三个
-    CGFloat width = UIScreen.mainScreen.bounds.size.width - sectionPack.minimumInteritemSpacing * 2 - sectionPack.inset.left - sectionPack.inset.right;
+    CGFloat width = commonInfo.maxWidth - sectionPack.minimumInteritemSpacing * 2 - sectionPack.inset.left - sectionPack.inset.right;
     width = floor(width / 3.0);
     return CGSizeMake(width, 80);
 }

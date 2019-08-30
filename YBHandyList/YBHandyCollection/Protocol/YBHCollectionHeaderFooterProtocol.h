@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YBHCCommonInfo.h"
 
 @protocol YBHCollectionHeaderFooterConfig;
 @class YBHCollectionSection;
@@ -15,13 +16,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol YBHCollectionHeaderFooterProtocol <NSObject>
 
-@required
+@optional
 
 /**
- 传递配置对象给 header/footer (根据配置对象拿到数据更新UI)
- 
+ 传递数据给 header/footer (根据配置对象拿到数据更新UI)
+
  @param config 配置对象
+ @param indexPath indexPath
+ @param commonInfo 公共信息
  */
+- (void)ybhc_setHeaderFooterConfig:(id<YBHCollectionHeaderFooterConfig>)config indexPath:(NSIndexPath *)indexPath commonInfo:(YBHCCommonInfo *)commonInfo;
 - (void)ybhc_setHeaderFooterConfig:(id<YBHCollectionHeaderFooterConfig>)config;
 
 /**
@@ -30,12 +34,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param config 配置对象
  @param reuseIdentifier 复用标识
  @param section section
- @param sectionPack cell 所属 section 的配置，可能会有用
+ @param sectionPack cell 所属 section 的配置
+ @param commonInfo 公共信息
  @return 高度
  */
++ (CGSize)ybhc_sizeForHeaderFooterWithConfig:(id<YBHCollectionHeaderFooterConfig>)config reuseIdentifier:(NSString *)reuseIdentifier section:(NSInteger)section sectionPack:(YBHCollectionSection *)sectionPack commonInfo:(YBHCCommonInfo *)commonInfo;
 + (CGSize)ybhc_sizeForHeaderFooterWithConfig:(id<YBHCollectionHeaderFooterConfig>)config reuseIdentifier:(NSString *)reuseIdentifier section:(NSInteger)section sectionPack:(YBHCollectionSection *)sectionPack;
-
-@optional
 
 /** 刷新 UICollectionView */
 @property (nonatomic, copy) void(^ybhc_reloadCollectionView)(void);

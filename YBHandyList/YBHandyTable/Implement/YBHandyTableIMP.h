@@ -7,6 +7,7 @@
 //
 
 #import "YBHTableSection.h"
+#import "YBHTCommonInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -38,6 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 数据源 */
 @property (nonatomic, strong) NSMutableArray<YBHTableSection *> *sectionArray;
+
+/** 公共信息对象，将会下发到 Cell/Header/Footer */
+@property (nonatomic, strong) YBHTCommonInfo *commonInfo;
 
 @end
 
