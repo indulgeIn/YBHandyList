@@ -14,7 +14,7 @@
 #import "TestTableNibHeader.h"
 #import "YBHandyList.h"
 
-@interface TestTableController () <YBHandyTableIMPDelegate, TestTableNibCellDelegate>
+@interface TestTableController () <TestTableNibCellDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @end
 
@@ -94,12 +94,6 @@
     NSLog(@"点击了 See More 按钮");
 }
 
-#pragma mark - <YBHandyTableIMPDelegate>
-
-- (void)ybht_IMP:(YBHandyTableIMP *)imp tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath config:(id<YBHTableCellConfig>)config {
-    NSLog(@"点击了 cell : %@", config);
-}
-
 #pragma mark - getter
 
 - (UITableView *)tableView {
@@ -110,8 +104,6 @@
         _tableView.estimatedRowHeight = 44;
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.estimatedSectionHeaderHeight = 0;
-        //这个代理提供了常用的 UITableView 代理转发
-        _tableView.ybht_tableIMP.delegate = self;
     }
     return _tableView;
 }

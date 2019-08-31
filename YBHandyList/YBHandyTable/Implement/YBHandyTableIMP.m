@@ -10,22 +10,6 @@
 
 @implementation YBHandyTableIMP
 
-#pragma mark - forword
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    YBHTableSection *htSection = self.sectionArray[indexPath.section];
-    id<YBHTableCellConfig> config = htSection.rowArray[indexPath.row];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ybht_IMP:tableView:didSelectRowAtIndexPath:config:)]) {
-        [self.delegate ybht_IMP:self tableView:tableView didSelectRowAtIndexPath:indexPath config:config];
-    }
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ybht_IMP:scrollViewDidScroll:)]) {
-        [self.delegate ybht_IMP:self scrollViewDidScroll:scrollView];
-    }
-}
-
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -119,6 +103,13 @@
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([cell respondsToSelector:@selector(ybht_didSelectedAtIndexPath:)]) {
+        [(id<YBHTableCellProtocol>)cell ybht_didSelectedAtIndexPath:indexPath];
+    }
 }
 
 #pragma mark - private

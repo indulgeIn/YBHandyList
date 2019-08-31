@@ -28,22 +28,6 @@
     return self;
 }
 
-#pragma mark - forword
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    YBHCollectionSection *hcSection = self.sectionArray[indexPath.section];
-    id<YBHCollectionCellConfig> config = hcSection.rowArray[indexPath.row];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ybhc_IMP:collectionView:didSelectItemAtIndexPath:config:)]) {
-        [self.delegate ybhc_IMP:self collectionView:collectionView didSelectItemAtIndexPath:indexPath config:config];
-    }
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ybhc_IMP:scrollViewDidScroll:)]) {
-        [self.delegate ybhc_IMP:self scrollViewDidScroll:scrollView];
-    }
-}
-
 #pragma mark - <UICollectionViewDataSource, UICollectionViewDelegate>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -145,6 +129,13 @@
     }
     
     return view;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    if ([cell respondsToSelector:@selector(ybhc_didSelectedAtIndexPath:)]) {
+        [(id<YBHCollectionCellProtocol>)cell ybhc_didSelectedAtIndexPath:indexPath];
+    }
 }
 
 #pragma mark - <UICollectionViewDelegateFlowLayout>

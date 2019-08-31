@@ -36,4 +36,8 @@
     return CGSizeMake(width, 80);
 }
 
+- (void)ybhc_didSelectedAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"\n%@ 被点击了", self.textLabel.text);
+}
+
 @end

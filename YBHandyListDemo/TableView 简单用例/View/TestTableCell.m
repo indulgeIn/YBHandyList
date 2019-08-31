@@ -49,6 +49,10 @@
     return model.shouldMagnify ? 100 : UITableViewAutomaticDimension;
 }
 
+- (void)ybht_didSelectedAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"\n%@ 被点击了", self.textLabel.text);
+}
+
 #pragma mark - event
 
 - (void)clickButton:(UIButton *)button {

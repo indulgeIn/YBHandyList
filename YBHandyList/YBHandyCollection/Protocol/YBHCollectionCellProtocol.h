@@ -41,6 +41,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (CGSize)ybhc_sizeForCellWithConfig:(id<YBHCollectionCellConfig>)config reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath sectionPack:(YBHCollectionSection *)sectionPack commonInfo:(YBHCCommonInfo *)commonInfo;
 + (CGSize)ybhc_sizeForCellWithConfig:(id<YBHCollectionCellConfig>)config reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath sectionPack:(YBHCollectionSection *)sectionPack;
 
+/**
+ 当前 cell 被选中
+
+ @param indexPath indexPath
+ */
+- (void)ybhc_didSelectedAtIndexPath:(NSIndexPath *)indexPath;
+
 /** 刷新 UICollectionView */
 @property (nonatomic, copy) void(^ybhc_reloadCollectionView)(void);
 

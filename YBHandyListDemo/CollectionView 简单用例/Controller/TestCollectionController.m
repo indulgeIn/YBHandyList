@@ -11,7 +11,7 @@
 #import "TestCollectionNibCell.h"
 #import "YBHandyList.h"
 
-@interface TestCollectionController () <YBHandyCollectionIMPDelegate>
+@interface TestCollectionController () <UIScrollViewDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @end
 
@@ -85,12 +85,6 @@
     [self.collectionView reloadData];
 }
 
-#pragma mark - <YBHandyCollectionIMPDelegate>
-
-- (void)ybhc_IMP:(YBHandyCollectionIMP *)imp collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath config:(id<YBHCollectionCellConfig>)config {
-    NSLog(@"点击了 cell : %@", config);
-}
-
 #pragma mark - getter
 
 - (UICollectionView *)collectionView {
@@ -98,8 +92,6 @@
         UICollectionViewFlowLayout *layout = UICollectionViewFlowLayout.new;
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         _collectionView.backgroundColor = UIColor.whiteColor;
-        //这个代理提供了常用的 UITableView 代理转发
-        _collectionView.ybhc_collectionIMP.delegate = self;
         
 //        layout.itemSize = CGSizeMake(60, 60);
 //        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);

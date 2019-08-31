@@ -40,6 +40,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (CGFloat)ybht_heightForCellWithConfig:(id<YBHTableCellConfig>)config reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath commonInfo:(YBHTCommonInfo *)commonInfo;
 + (CGFloat)ybht_heightForCellWithConfig:(id<YBHTableCellConfig>)config reuseIdentifier:(NSString *)reuseIdentifier indexPath:(NSIndexPath *)indexPath;
 
+/**
+ 当前 cell 被选中
+ 
+ @param indexPath indexPath
+ */
+- (void)ybht_didSelectedAtIndexPath:(NSIndexPath *)indexPath;
+
 /** 刷新 UITableView */
 @property (nonatomic, copy) void(^ybht_reloadTableView)(void);
 
