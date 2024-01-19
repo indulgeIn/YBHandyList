@@ -60,7 +60,7 @@
     if ([cell conformsToProtocol:@protocol(YBHCollectionCellProtocol)]) {
         UICollectionViewCell<YBHCollectionCellProtocol> *tmpCell = (UICollectionViewCell<YBHCollectionCellProtocol> *)cell;
 
-        if ([tmpCell respondsToSelector:@selector(ybhc_setHeaderFooterConfig:indexPath:commonInfo:)]) {
+        if ([tmpCell respondsToSelector:@selector(ybhc_setCellConfig:indexPath:commonInfo:)]) {
             [tmpCell ybhc_setCellConfig:config indexPath:indexPath commonInfo:self.commonInfo];
         }
         if ([tmpCell respondsToSelector:@selector(ybhc_setCellConfig:)]) {
